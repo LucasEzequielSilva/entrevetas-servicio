@@ -58,6 +58,7 @@ const Gallery = () => {
                   loop
                   playsInline
                   autoPlay
+                  ref={(el) => { if (el) el.playbackRate = 0.6; }}
                   className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
               )}
