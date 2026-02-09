@@ -28,12 +28,12 @@ const Hero = () => {
           alt="Taller de carpintería artesanal"
           className="w-full h-full object-cover"
         />
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/40 to-transparent"
+          style={{ opacity: overlayOpacity }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
       </motion.div>
-      <motion.div
-        className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl bg-gradient-to-t from-foreground via-foreground/40 to-transparent"
-        style={{ opacity: overlayOpacity }}
-      />
-      <motion.div className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" style={{ y: imageY, scale: imageScale }} />
 
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
         <motion.span
