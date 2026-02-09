@@ -10,6 +10,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "hero.title.2": "con intención.",
     "hero.subtitle.1": "Carpintería a medida para hogares y proyectos arquitectónicos.",
     "hero.subtitle.2": "Hecho a medida, construido para durar.",
+    "hero.scroll": "Descubrir",
 
     // Values
     "values.label": "Lo que nos define",
@@ -59,6 +60,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "hero.title.2": "with intention.",
     "hero.subtitle.1": "Bespoke carpentry for homes and architectural projects.",
     "hero.subtitle.2": "Made to measure, built to last.",
+    "hero.scroll": "Discover",
 
     // Values
     "values.label": "What defines us",

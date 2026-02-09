@@ -27,15 +27,17 @@ const Values = () => {
           {values.map((value, i) => (
             <motion.div
               key={value.number}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="group"
             >
               <span className="text-xs text-accent font-medium tracking-widest">
                 {value.number}
               </span>
-              <h3 className="text-2xl md:text-3xl mt-4 mb-4 tracking-tight">
+              <div className="h-[1px] w-0 group-hover:w-12 bg-accent mt-3 mb-5 transition-all duration-500 ease-out" />
+              <h3 className="text-2xl md:text-3xl mb-4 tracking-tight">
                 {value.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed font-light">
