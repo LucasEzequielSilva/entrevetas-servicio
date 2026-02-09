@@ -23,10 +23,10 @@ const Process = () => {
           {t("process.label")}
         </motion.p>
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-3xl md:text-5xl tracking-tight mb-20 max-w-2xl leading-tight"
         >
           {t("process.title.1")}
@@ -38,14 +38,14 @@ const Process = () => {
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="relative"
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="relative group"
             >
               <div className="flex items-start gap-6">
-                <span className="text-5xl md:text-6xl font-serif text-border select-none">
+                <span className="text-5xl md:text-6xl font-serif text-border group-hover:text-accent/30 transition-colors duration-700 select-none">
                   {step.number}
                 </span>
                 <div className="pt-2">
