@@ -1,10 +1,14 @@
+import { useLanguage } from "@/i18n/LanguageContext";
+
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="py-12 px-6 md:px-16 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <span className="font-serif text-lg tracking-wide">Madero Studio</span>
         <div className="flex items-center gap-8 text-sm text-muted-foreground">
-          <span>Valencia, Spain</span>
+          <span>{t("footer.location")}</span>
           <span className="hidden md:inline text-border">·</span>
           <a
             href="mailto:hello@maderostudio.es"

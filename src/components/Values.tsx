@@ -1,27 +1,15 @@
 import { motion } from "framer-motion";
-
-const values = [
-  {
-    number: "01",
-    title: "Noble Materials",
-    description:
-      "We work exclusively with sustainably sourced European hardwoods — oak, walnut, ash — selected for character and longevity.",
-  },
-  {
-    number: "02",
-    title: "Custom Design",
-    description:
-      "Every piece is drawn to your space. No catalogue, no standard sizes. Each project begins with your architecture.",
-  },
-  {
-    number: "03",
-    title: "Master Craftsmanship",
-    description:
-      "Traditional joinery meets contemporary precision. Our workshop combines hand techniques with modern engineering.",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Values = () => {
+  const { t } = useLanguage();
+
+  const values = [
+    { number: "01", title: t("values.1.title"), description: t("values.1.desc") },
+    { number: "02", title: t("values.2.title"), description: t("values.2.desc") },
+    { number: "03", title: t("values.3.title"), description: t("values.3.desc") },
+  ];
+
   return (
     <section className="py-24 md:py-40 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
@@ -32,7 +20,7 @@ const Values = () => {
           transition={{ duration: 0.6 }}
           className="text-sm tracking-widest uppercase text-muted-foreground mb-16"
         >
-          What defines us
+          {t("values.label")}
         </motion.p>
 
         <div className="grid md:grid-cols-3 gap-12 md:gap-16">
