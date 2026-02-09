@@ -58,7 +58,7 @@ const Gallery = () => {
                   loop={project.src !== video2}
                   playsInline
                   autoPlay
-                  ref={(el) => { if (el) el.playbackRate = project.src === video1 ? 0.6 : 1; }}
+                  ref={(el) => { if (el) el.playbackRate = 1; }}
                   className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
               )}
