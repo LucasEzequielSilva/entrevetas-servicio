@@ -1,24 +1,15 @@
 import { motion } from "framer-motion";
-
-const steps = [
-  {
-    number: "01",
-    title: "Conversation",
-    description: "We visit your space, listen to your ideas, and understand the architecture.",
-  },
-  {
-    number: "02",
-    title: "Design",
-    description: "Detailed drawings and material selection, refined until every detail is right.",
-  },
-  {
-    number: "03",
-    title: "Build",
-    description: "Precision crafting in our workshop, followed by careful on-site installation.",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Process = () => {
+  const { t } = useLanguage();
+
+  const steps = [
+    { number: "01", title: t("process.1.title"), description: t("process.1.desc") },
+    { number: "02", title: t("process.2.title"), description: t("process.2.desc") },
+    { number: "03", title: t("process.3.title"), description: t("process.3.desc") },
+  ];
+
   return (
     <section className="py-24 md:py-40 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
@@ -29,7 +20,7 @@ const Process = () => {
           transition={{ duration: 0.6 }}
           className="text-sm tracking-widest uppercase text-muted-foreground mb-6"
         >
-          How we work
+          {t("process.label")}
         </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -38,9 +29,9 @@ const Process = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-5xl tracking-tight mb-20 max-w-2xl leading-tight"
         >
-          From idea to
+          {t("process.title.1")}
           <br />
-          finished piece.
+          {t("process.title.2")}
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-12 md:gap-20">
