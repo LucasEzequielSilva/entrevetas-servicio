@@ -41,6 +41,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.3.title": "Construcción",
     "process.3.desc": "Fabricación precisa en nuestro taller, seguida de una cuidadosa instalación en obra.",
 
+    // Exteriors CTA
+    "exteriors.label": "Además",
+    "exteriors.title.1": "También trabajamos",
+    "exteriors.title.2": "al aire libre.",
+    "exteriors.desc": "Pérgolas, porches y mobiliario exterior en madera maciza. La misma artesanía, ahora también para tus espacios exteriores.",
+    "exteriors.cta": "Descubrir exteriores",
+    "exteriors.alt": "Pérgola de madera artesanal en jardín mediterráneo",
+
     // Contact
     "contact.label": "Iniciar un proyecto",
     "contact.title.1": "Hablemos de",
@@ -90,6 +98,14 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.2.desc": "Detailed drawings and material selection, refined until every detail is right.",
     "process.3.title": "Build",
     "process.3.desc": "Precision crafting in our workshop, followed by careful on-site installation.",
+
+    // Exteriors CTA
+    "exteriors.label": "There's more",
+    "exteriors.title.1": "We also work",
+    "exteriors.title.2": "outdoors.",
+    "exteriors.desc": "Pergolas, porches, and outdoor furniture in solid wood. The same craftsmanship, now for your exterior spaces too.",
+    "exteriors.cta": "Discover outdoors",
+    "exteriors.alt": "Handcrafted wooden pergola in Mediterranean garden",
 
     // Contact
     "contact.label": "Start a project",
