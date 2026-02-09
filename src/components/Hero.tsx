@@ -20,9 +20,9 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-end pb-20 md:pb-32 overflow-hidden"
+      className="relative min-h-screen flex items-end pb-20 md:pb-32 overflow-hidden p-4 md:p-6"
     >
-      <motion.div className="absolute inset-0" style={{ y: imageY, scale: imageScale }}>
+      <motion.div className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl overflow-hidden" style={{ y: imageY, scale: imageScale }}>
         <img
           src={heroImage}
           alt="Taller de carpintería artesanal"
@@ -30,10 +30,10 @@ const Hero = () => {
         />
       </motion.div>
       <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/40 to-transparent"
+        className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl bg-gradient-to-t from-foreground via-foreground/40 to-transparent"
         style={{ opacity: overlayOpacity }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
+      <div className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
 
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
         <motion.span
