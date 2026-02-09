@@ -55,7 +55,7 @@ const Gallery = () => {
                 <video
                   src={project.src}
                   muted
-                  loop
+                  loop={project.src !== video2}
                   playsInline
                   autoPlay
                   ref={(el) => { if (el) el.playbackRate = project.src === video1 ? 0.6 : 1; }}
