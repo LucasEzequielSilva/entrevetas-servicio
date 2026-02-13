@@ -46,7 +46,7 @@ const Hero = () => {
           <img
             src={logoImg}
             alt="Entre Vetas"
-            className="w-[180px] md:w-[280px] h-auto mix-blend-screen"
+            className="h-[65px] md:h-[80px] lg:h-[110px] w-auto mix-blend-screen"
           />
         </motion.div>
         <motion.div
