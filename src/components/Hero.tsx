@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroImage from "@/assets/hero-carpentry.jpg";
-import logoImg from "@/assets/logo-entrevetas.png";
+import logoImg from "@/assets/logo-ev-horizontal.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -34,6 +34,7 @@ const Hero = () => {
           style={{ opacity: overlayOpacity }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
+        <div className="absolute inset-0 bg-black/[0.18]" />
       </motion.div>
 
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
@@ -44,8 +45,9 @@ const Hero = () => {
         >
           <img
             src={logoImg}
-            alt="Entre Vetas - Carpintería & Paisajismo"
-            className="h-10 md:h-14 w-auto"
+            alt="Entre Vetas"
+            className="h-[44px] md:h-[52px] w-auto"
+            style={{ filter: 'none' }}
           />
         </motion.div>
         <motion.div
