@@ -46,8 +46,7 @@ const Hero = () => {
           <img
             src={logoImg}
             alt="Entre Vetas"
-            className="h-[44px] md:h-[52px] w-auto"
-            style={{ filter: 'none' }}
+            className="h-[56px] md:h-[72px] w-auto"
           />
         </motion.div>
         <motion.div
