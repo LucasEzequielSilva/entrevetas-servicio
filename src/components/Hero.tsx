@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroImage from "@/assets/hero-carpentry.jpg";
-import logoImg from "@/assets/logo-ev-horizontal.png";
+import logoImg from "@/assets/logo-ev-white.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -46,7 +46,7 @@ const Hero = () => {
           <img
             src={logoImg}
             alt="Entre Vetas"
-            className="h-[56px] md:h-[72px] w-auto"
+            className="w-[180px] md:w-[280px] h-auto mix-blend-screen"
           />
         </motion.div>
         <motion.div
