@@ -36,15 +36,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
       </motion.div>
 
-      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
-        <motion.img
-          src={navLogo}
-          alt="Entre Vetas"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-10 md:h-12 w-auto"
-        />
+      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-end px-6 md:px-16 py-8">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -62,11 +54,13 @@ const Hero = () => {
       </nav>
 
       <motion.div className="relative z-10 px-6 md:px-16 max-w-4xl" style={{ y: contentY }}>
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: 60 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="h-[1px] bg-accent mb-8"
+        <motion.img
+          src={navLogo}
+          alt="Entre Vetas"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="h-10 md:h-12 w-auto mb-8"
         />
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
