@@ -21,7 +21,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-end pb-10 md:pb-32 overflow-hidden p-4 md:p-6"
+      className="relative min-h-[85vh] md:min-h-screen flex items-end pb-10 md:pb-32 overflow-hidden p-4 md:p-6"
     >
       <motion.div className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl overflow-hidden" style={{ y: imageY, scale: imageScale }}>
         <img
