@@ -46,7 +46,7 @@ const Hero = () => {
           <img
             src={logoImg}
             alt="Entre Vetas"
-            className="h-10 md:h-16 w-auto brightness-0 invert opacity-90"
+            className="brand-logo"
           />
         </motion.div>
         <motion.div

@@ -104,6 +104,19 @@
   }
 }
 
+/* Brand logo */
+.brand-logo {
+  height: 40px !important;
+  width: auto !important;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+@media (max-width: 480px) {
+  .brand-logo {
+    height: 34px !important;
+  }
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
