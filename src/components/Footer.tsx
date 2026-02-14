@@ -1,4 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
+import logoColor from "@/assets/logo-ev-color.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -6,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="py-12 px-6 md:px-16 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <span className="font-serif text-lg tracking-wide">Madero Studio</span>
+        <img src={logoColor} alt="Entre Vetas" className="h-[52px] md:h-[64px]" />
         <div className="flex items-center gap-8 text-sm text-muted-foreground">
           <span>{t("footer.location")}</span>
           <span className="hidden md:inline text-border">·</span>
