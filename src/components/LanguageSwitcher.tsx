@@ -10,7 +10,7 @@ const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center gap-1 text-xs md:text-sm tracking-widest">
+    <div className="flex items-center gap-1 text-sm tracking-widest">
       {languages.map((lang, i) => (
         <span key={lang.code} className="flex items-center gap-1">
           {i > 0 && <span className="text-primary-foreground/40">/</span>}

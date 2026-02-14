@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroImage from "@/assets/hero-carpentry.jpg";
-import logoImg from "@/assets/logo-ev-white-new.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -21,7 +20,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[85vh] md:min-h-screen flex items-end pb-10 md:pb-32 overflow-hidden p-4 md:p-6"
+      className="relative min-h-screen flex items-end pb-20 md:pb-32 overflow-hidden p-4 md:p-6"
     >
       <motion.div className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl overflow-hidden" style={{ y: imageY, scale: imageScale }}>
         <img
@@ -34,41 +33,45 @@ const Hero = () => {
           style={{ opacity: overlayOpacity }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
-        <div className="absolute inset-0 bg-black/[0.18]" />
       </motion.div>
 
-      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-5 md:px-16 py-5 md:py-8">
-        <motion.a
-          id="site-logo"
-          href="/"
+      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
+        <motion.span
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-serif text-xl md:text-2xl tracking-wide text-primary-foreground"
         >
-          <img src={logoImg} alt="EV" />
-        </motion.a>
+          Madero Studio
+        </motion.span>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex items-center gap-4 md:gap-6"
+          className="flex items-center gap-6"
         >
           <LanguageSwitcher />
           <a
             href="#contact"
-            className="text-[11px] md:text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
+            className="text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
           >
             {t("nav.contact")}
           </a>
         </motion.div>
       </nav>
 
-      <motion.div className="relative z-10 px-5 md:px-16 max-w-4xl" style={{ y: contentY }}>
+      <motion.div className="relative z-10 px-6 md:px-16 max-w-4xl" style={{ y: contentY }}>
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: 60 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="h-[1px] bg-accent mb-8"
+        />
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[2.25rem] md:text-6xl lg:text-7xl text-primary-foreground leading-[1.1] tracking-tight mb-5 md:mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.1] tracking-tight mb-6"
         >
           {t("hero.title.1")}
           <br />
@@ -78,7 +81,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-base md:text-xl text-primary-foreground/70 max-w-lg font-light leading-relaxed"
+          className="text-lg md:text-xl text-primary-foreground/70 max-w-lg font-light leading-relaxed"
         >
           {t("hero.subtitle.1")}
           <br className="hidden md:block" />
@@ -90,7 +93,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="inline-flex items-center gap-3 mt-8 md:mt-10 text-xs md:text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 group"
+          className="inline-flex items-center gap-3 mt-10 text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 group"
         >
           <span>{t("hero.scroll")}</span>
           <motion.span

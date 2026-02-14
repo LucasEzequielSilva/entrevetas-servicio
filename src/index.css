@@ -104,26 +104,6 @@
   }
 }
 
-/* Site logo */
-#site-logo {
-  display: flex;
-  align-items: center;
-}
-#site-logo img,
-#site-logo svg {
-  height: 64px !important;
-  width: auto !important;
-  max-height: none !important;
-  max-width: none !important;
-  filter: brightness(0) invert(1);
-}
-@media (max-width: 480px) {
-  #site-logo img,
-  #site-logo svg {
-    height: 52px !important;
-  }
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
