@@ -65,13 +65,14 @@ const Hero = () => {
         </motion.div>
       </nav>
 
+      <motion.div
+        initial={{ width: 0 }}
+        animate={{ width: 60 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute top-24 md:top-28 left-6 md:left-16 z-20 h-[1px] bg-accent"
+      />
+
       <motion.div className="relative z-10 px-6 md:px-16 max-w-4xl" style={{ y: contentY }}>
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: 60 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="h-[1px] bg-accent mb-8"
-        />
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
