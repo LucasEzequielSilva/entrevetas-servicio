@@ -43,7 +43,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img src={logoEV} alt="Entre Vetas" className="h-[52px] md:h-[64px]" />
+          <img src={logoEV} alt="Entre Vetas" className="h-[40px] md:h-[48px]" />
         </motion.a>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
