@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/[0.18]" />
       </motion.div>
 
-      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 h-24 md:h-28">
+      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-6 md:py-8">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -46,7 +46,7 @@ const Hero = () => {
           <img
             src={logoImg}
             alt="Entre Vetas"
-            className="h-[100px] md:h-[120px] w-auto mix-blend-screen"
+            className="h-[140px] md:h-[160px] w-auto mix-blend-screen -my-[50px] md:-my-[56px]"
           />
         </motion.div>
         <motion.div
@@ -58,19 +58,12 @@ const Hero = () => {
           <LanguageSwitcher />
           <a
             href="#contact"
-            className="text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
+            className="text-xs md:text-sm tracking-widest uppercase text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
           >
             {t("nav.contact")}
           </a>
         </motion.div>
       </nav>
-
-      <motion.div
-        initial={{ width: 0 }}
-        animate={{ width: 60 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-24 md:top-28 left-6 md:left-16 z-20 h-[1px] bg-accent"
-      />
 
       <motion.div className="relative z-10 px-6 md:px-16 max-w-4xl" style={{ y: contentY }}>
         <motion.h1
