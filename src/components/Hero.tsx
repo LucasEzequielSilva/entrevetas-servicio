@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroImage from "@/assets/hero-carpentry.jpg";
+import logoEV from "@/assets/logo-ev-white.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -36,14 +37,14 @@ const Hero = () => {
       </motion.div>
 
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
-        <motion.span
+        <motion.a
+          href="/"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-serif text-xl md:text-2xl tracking-wide text-primary-foreground"
         >
-          Madero Studio
-        </motion.span>
+          <img src={logoEV} alt="Entre Vetas" className="h-[52px] md:h-[64px]" />
+        </motion.a>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
