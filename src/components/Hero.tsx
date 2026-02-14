@@ -61,7 +61,7 @@ const Hero = () => {
         </motion.div>
       </nav>
 
-      <motion.div className="relative z-10 px-6 md:px-16 max-w-4xl" style={{ y: contentY }}>
+      <motion.div className="relative z-10 px-6 md:px-16 max-w-4xl py-0 pt-0 pb-[30px]" style={{ y: contentY }}>
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: 60 }}
