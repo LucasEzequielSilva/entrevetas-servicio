@@ -104,16 +104,23 @@
   }
 }
 
-/* Brand logo */
-.brand-logo {
-  height: 40px !important;
+/* Site logo */
+#site-logo {
+  display: flex;
+  align-items: center;
+}
+#site-logo img,
+#site-logo svg {
+  height: 64px !important;
   width: auto !important;
-  display: block;
+  max-height: none !important;
+  max-width: none !important;
   filter: brightness(0) invert(1);
 }
 @media (max-width: 480px) {
-  .brand-logo {
-    height: 34px !important;
+  #site-logo img,
+  #site-logo svg {
+    height: 52px !important;
   }
 }
 
