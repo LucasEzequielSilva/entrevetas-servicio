@@ -38,17 +38,15 @@ const Hero = () => {
       </motion.div>
 
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-5 md:px-16 py-5 md:py-8">
-        <motion.div
+        <motion.a
+          id="site-logo"
+          href="/"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img
-            src={logoImg}
-            alt="Entre Vetas"
-            className="brand-logo"
-          />
-        </motion.div>
+          <img src={logoImg} alt="EV" />
+        </motion.a>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
