@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroImage from "@/assets/hero-carpentry.jpg";
-import logoImg from "@/assets/logo-ev-white.png";
+import logoImg from "@/assets/logo-ev-white-new.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
