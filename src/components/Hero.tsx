@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black/[0.18]" />
       </motion.div>
 
-      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
+      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 h-24 md:h-28">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -46,7 +46,7 @@ const Hero = () => {
           <img
             src={logoImg}
             alt="Entre Vetas"
-            className="w-[120px] md:w-[150px] lg:w-[180px] h-auto mix-blend-screen"
+            className="h-[100px] md:h-[120px] w-auto mix-blend-screen"
           />
         </motion.div>
         <motion.div
