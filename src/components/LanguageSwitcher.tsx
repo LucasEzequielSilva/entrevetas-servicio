@@ -1,31 +1,71 @@
+import { useState, useRef, useEffect } from "react";
+import { Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/translations";
+import { motion, AnimatePresence } from "framer-motion";
 
-const languages: { code: Language; label: string }[] = [
-  { code: "es", label: "ES" },
-  { code: "en", label: "EN" },
+const languages: { code: Language; label: string; name: string }[] = [
+  { code: "es", label: "ES", name: "Español" },
+  { code: "en", label: "EN", name: "English" },
+  { code: "de", label: "DE", name: "Deutsch" },
+  { code: "nl", label: "NL", name: "Nederlands" },
+  { code: "fr", label: "FR", name: "Français" },
 ];
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const current = languages.find((l) => l.code === language)!;
 
   return (
-    <div className="flex items-center gap-1 text-sm tracking-widest">
-      {languages.map((lang, i) => (
-        <span key={lang.code} className="flex items-center gap-1">
-          {i > 0 && <span className="text-primary-foreground/40">/</span>}
-          <button
-            onClick={() => setLanguage(lang.code)}
-            className={`transition-colors duration-300 ${
-              language === lang.code
-                ? "text-primary-foreground"
-                : "text-primary-foreground/40 hover:text-primary-foreground/70"
-            }`}
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-1.5 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
+      >
+        <Globe className="w-4 h-4" />
+        <span className="tracking-widest uppercase">{current.label}</span>
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.15 }}
+            className="absolute right-0 top-full mt-2 w-48 rounded-lg bg-popover shadow-xl border border-border overflow-hidden z-50"
           >
-            {lang.label}
-          </button>
-        </span>
-      ))}
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  setLanguage(lang.code);
+                  setOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-200 ${
+                  language === lang.code
+                    ? "bg-accent text-accent-foreground font-medium"
+                    : "text-popover-foreground hover:bg-muted"
+                }`}
+              >
+                <span className="tracking-wider font-medium w-6">{lang.label}</span>
+                <span>{lang.name}</span>
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
