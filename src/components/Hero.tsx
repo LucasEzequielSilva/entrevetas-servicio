@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroImage from "@/assets/hero-carpentry.jpg";
-import navLogo from "@/assets/ev-nav-logo.png";
+import navLogo from "@/assets/ev-logo-full.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
