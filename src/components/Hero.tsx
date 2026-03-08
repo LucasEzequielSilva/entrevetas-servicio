@@ -135,19 +135,28 @@ const Hero = () => {
               </svg>
             </button>
 
-            <nav className="relative z-10 flex flex-col items-center gap-8">
+            <nav className="relative z-10 flex flex-col items-center gap-0">
               {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.key}
-                  href={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08 * i, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  onClick={(e) => { smoothScroll(e, link.href); setMenuOpen(false); }}
-                  className="text-2xl tracking-[0.2em] uppercase text-primary-foreground/85 hover:text-primary-foreground transition-colors duration-200 font-light"
-                >
-                  {t(link.key)}
-                </motion.a>
+                <React.Fragment key={link.key}>
+                  {i > 0 && (
+                    <motion.span
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ delay: 0.08 * i + 0.1, duration: 0.4 }}
+                      className="block w-8 h-px bg-primary-foreground/20 my-4"
+                    />
+                  )}
+                  <motion.a
+                    href={link.href}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.08 * i, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    onClick={(e) => { smoothScroll(e, link.href); setMenuOpen(false); }}
+                    className="text-2xl tracking-[0.2em] uppercase text-primary-foreground/85 hover:text-primary-foreground transition-colors duration-200 font-light"
+                  >
+                    {t(link.key)}
+                  </motion.a>
+                </React.Fragment>
               ))}
             </nav>
           </motion.div>
