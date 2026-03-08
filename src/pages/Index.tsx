@@ -12,6 +12,7 @@ const Index = () => {
     <main className="bg-background">
       <Hero />
       <Values />
+      <AboutDino />
       <Gallery />
       <Process />
       <ExteriorsCTA />
