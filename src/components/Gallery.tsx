@@ -22,7 +22,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-24 md:py-40 px-6 md:px-16 bg-card">
+    <section id="gallery" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-card">
       <div className="max-w-7xl mx-auto">
         <motion.p
           initial={{ opacity: 0 }}
