@@ -1,14 +1,23 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useRef, useState } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
 import navLogo from "@/assets/ev-logo-full.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const WHATSAPP_NUMBER = "34600000000"; // Replace with Dino's actual number
+const WHATSAPP_NUMBER = "34600000000";
+
+const navLinks = [
+  { key: "nav.gallery", href: "#gallery" },
+  { key: "nav.projects", href: "#projects" },
+  { key: "nav.process", href: "#process" },
+  { key: "nav.about", href: "#about" },
+  { key: "nav.contact", href: "#contact" },
+] as const;
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [menuOpen, setMenuOpen] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -59,24 +68,71 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex items-center gap-6 md:gap-8"
         >
-          <a href="#gallery" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-            {t("nav.gallery")}
-          </a>
-          <a href="#projects" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-            {t("nav.projects")}
-          </a>
-          <a href="#process" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-            {t("nav.process")}
-          </a>
-          <a href="#about" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-            {t("nav.about")}
-          </a>
-          <a href="#contact" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-            {t("nav.contact")}
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.key}
+              href={link.href}
+              className="hidden min-[900px]:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300"
+            >
+              {t(link.key)}
+            </a>
+          ))}
           <LanguageSwitcher />
+
+          {/* Hamburger */}
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="min-[900px]:hidden flex flex-col justify-center items-center gap-[6px] p-1"
+            aria-label="Open menu"
+          >
+            <span className="block w-[28px] h-[2.5px] bg-primary-foreground rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-primary-foreground rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-primary-foreground rounded-sm" />
+          </button>
         </motion.div>
       </nav>
+
+      {/* Mobile full-screen menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-50 bg-foreground/90 backdrop-blur-sm flex flex-col items-center justify-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-8 right-6 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              aria-label="Close menu"
+            >
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+
+            <nav className="flex flex-col items-center gap-8">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.key}
+                  href={link.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 * i, duration: 0.3 }}
+                  onClick={() => setMenuOpen(false)}
+                  className="text-2xl tracking-widest uppercase text-primary-foreground/90 hover:text-primary-foreground transition-colors duration-200"
+                >
+                  {t(link.key)}
+                </motion.a>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Hero content */}
       <motion.div className="relative z-10 px-6 md:px-16 max-w-4xl" style={{ y: contentY }}>
