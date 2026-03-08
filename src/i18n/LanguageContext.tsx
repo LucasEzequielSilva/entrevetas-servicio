@@ -17,7 +17,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   });
 
   const t = useCallback(
-    (key: string) => translations[language][key] ?? translations["es"][key] ?? key,
+    (key: string) => translations[language]?.[key] ?? translations["es"]?.[key] ?? key,
     [language]
   );
 
@@ -28,6 +28,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useLanguage = () => {
   const ctx = useContext(LanguageContext);
   if (!ctx) throw new Error("useLanguage must be used within LanguageProvider");
