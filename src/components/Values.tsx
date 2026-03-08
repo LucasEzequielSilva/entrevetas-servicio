@@ -8,7 +8,6 @@ const Values = () => {
     { number: "01", title: t("values.1.title"), description: t("values.1.desc") },
     { number: "02", title: t("values.2.title"), description: t("values.2.desc") },
     { number: "03", title: t("values.3.title"), description: t("values.3.desc") },
-    { number: "04", title: t("values.4.title"), description: t("values.4.desc") },
   ];
 
   return (
@@ -24,7 +23,7 @@ const Values = () => {
           {t("values.label")}
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-14 md:gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 md:gap-x-16 gap-y-14">
           {values.map((value, i) => (
             <motion.div
               key={value.number}
