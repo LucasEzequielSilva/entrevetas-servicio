@@ -8,7 +8,7 @@ const Contact = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
   return (
-    <section id="contact" className="py-24 md:py-40 px-6 md:px-16 bg-foreground overflow-hidden">
+    <section id="contact" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-foreground overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
