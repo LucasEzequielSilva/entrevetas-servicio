@@ -64,7 +64,7 @@ const Hero = () => {
       </motion.div>
 
       {/* Sticky Nav */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-6 transition-all duration-500 ${scrolled ? "bg-foreground/80 backdrop-blur-md py-4 shadow-lg" : ""}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 transition-all duration-700 ease-out ${scrolled ? "py-3 bg-foreground/60 backdrop-blur-xl shadow-[0_1px_0_0_rgba(255,255,255,0.05)]" : "py-6"}`}>
         <motion.img
           src={navLogo}
           alt="Entre Vetas"
