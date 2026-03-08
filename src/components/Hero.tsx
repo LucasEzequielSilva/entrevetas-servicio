@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent } from "framer-motion";
 import { useRef, useState } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
 import navLogo from "@/assets/ev-logo-full.png";
@@ -25,6 +25,7 @@ const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
 const Hero = () => {
   const { t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -35,6 +36,9 @@ const Hero = () => {
   const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.3, 0.7]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 80));
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
@@ -59,8 +63,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
       </motion.div>
 
-      {/* Nav */}
-      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-8">
+      {/* Sticky Nav */}
+      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-6 transition-all duration-500 ${scrolled ? "bg-foreground/80 backdrop-blur-md py-4 shadow-lg" : ""}`}>
         <motion.img
           src={navLogo}
           alt="Entre Vetas"
