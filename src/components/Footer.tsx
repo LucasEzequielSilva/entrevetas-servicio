@@ -1,5 +1,5 @@
 import { useLanguage } from "@/i18n/LanguageContext";
-import fullLogo from "@/assets/ev-logo-full.png";
+import fullLogo from "@/assets/ev-logo-wood.png";
 
 const Footer = () => {
   const { t } = useLanguage();
