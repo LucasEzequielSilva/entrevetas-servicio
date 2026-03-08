@@ -13,7 +13,7 @@ const ProjectTypes = () => {
   ];
 
   return (
-    <section className="py-24 md:py-40 px-6 md:px-16">
+    <section id="projects" className="py-24 md:py-40 px-6 md:px-16">
       <div className="max-w-4xl mx-auto">
         <motion.p
           initial={{ opacity: 0 }}

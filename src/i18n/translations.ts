@@ -2,11 +2,11 @@ export type Language = "es" | "en" | "de" | "nl" | "fr";
 
 export const translations: Record<Language, Record<string, string>> = {
   es: {
-    // Nav
-    "nav.contact": "Contacto",
-    "nav.services": "Servicios",
-    "nav.about": "Sobre Dino",
+    "nav.gallery": "Trabajos",
+    "nav.projects": "Proyectos",
     "nav.process": "Proceso",
+    "nav.about": "Sobre Dino",
+    "nav.contact": "Contacto",
 
     // Hero
     "hero.title": "Carpintería y paisajismo en Altea",
