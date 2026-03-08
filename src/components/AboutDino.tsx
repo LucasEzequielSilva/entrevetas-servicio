@@ -6,7 +6,7 @@ const AboutDino = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-24 md:py-32 px-6 md:px-16 bg-background">
+    <section id="about" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-background">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         {/* Image */}
         <motion.div
