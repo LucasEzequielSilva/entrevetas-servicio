@@ -23,6 +23,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "values.3.title": "Maestría Artesanal",
     "values.3.desc": "Ebanistería tradicional con precisión contemporánea. Nuestro taller combina técnicas manuales con ingeniería moderna.",
 
+    // About
+    "about.label": "Sobre Dino",
+    "about.title": "Sobre Dino",
+    "about.p1": "Entre Vetas nace del deseo de dedicarme a lo que realmente me gusta: trabajar la madera.",
+    "about.p2": "Mi trayectoria comenzó en Argentina y hoy continúa en España, siempre vinculada al diseño, la colocación y la restauración en distintos tipos de proyectos.",
+    "about.p3": "El nombre refleja la esencia del proyecto: cada pieza de madera cuenta su propia historia a través de sus vetas. Son líneas únicas e irrepetibles, marcadas por años de crecimiento y resistencia. Por eso trabajo respetando el material y adaptando cada proyecto al espacio y a su uso real.",
+    "about.p4": "Disfruto cada etapa del proceso: pensar el espacio, elegir el material adecuado y ejecutar cada detalle con cuidado. Creo en el trabajo bien hecho, en lo artesanal y en las terminaciones pensadas para durar.",
+    "about.p5": "Cada trabajo es personalizado, con asesoramiento cercano y presupuestos sin compromiso.",
+
     // Gallery
     "gallery.label": "Trabajos seleccionados",
     "gallery.1": "Celosía de madera",
