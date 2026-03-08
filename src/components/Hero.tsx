@@ -15,6 +15,12 @@ const navLinks = [
   { key: "nav.contact", href: "#contact" },
 ] as const;
 
+const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  e.preventDefault();
+  const el = document.querySelector(href);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 const Hero = () => {
   const { t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -72,6 +78,7 @@ const Hero = () => {
             <a
               key={link.key}
               href={link.href}
+              onClick={(e) => smoothScroll(e, link.href)}
               className="hidden min-[900px]:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300"
             >
               {t(link.key)}
@@ -99,14 +106,27 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-50 bg-foreground/90 backdrop-blur-sm flex flex-col items-center justify-center"
+            transition={{ duration: 0.35 }}
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden"
             onClick={() => setMenuOpen(false)}
           >
+            {/* Video background with premium blur */}
+            <div className="absolute inset-0">
+              <video
+                src={heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover scale-110 blur-[2px]"
+              />
+              <div className="absolute inset-0 bg-foreground/75 backdrop-blur-md" />
+            </div>
+
             {/* Close button */}
             <button
               onClick={() => setMenuOpen(false)}
-              className="absolute top-8 right-6 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              className="absolute top-8 right-6 text-primary-foreground/80 hover:text-primary-foreground transition-colors z-10"
               aria-label="Close menu"
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
@@ -115,16 +135,16 @@ const Hero = () => {
               </svg>
             </button>
 
-            <nav className="flex flex-col items-center gap-8">
+            <nav className="relative z-10 flex flex-col items-center gap-8">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.key}
                   href={link.href}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 * i, duration: 0.3 }}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-2xl tracking-widest uppercase text-primary-foreground/90 hover:text-primary-foreground transition-colors duration-200"
+                  transition={{ delay: 0.08 * i, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  onClick={(e) => { smoothScroll(e, link.href); setMenuOpen(false); }}
+                  className="text-2xl tracking-[0.2em] uppercase text-primary-foreground/85 hover:text-primary-foreground transition-colors duration-200 font-light"
                 >
                   {t(link.key)}
                 </motion.a>
