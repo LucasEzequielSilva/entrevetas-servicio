@@ -25,6 +25,7 @@ const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
 const Hero = () => {
   const { t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
