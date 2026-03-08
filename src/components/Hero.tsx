@@ -118,9 +118,9 @@ const Hero = () => {
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover scale-110 blur-[2px]"
+                className="w-full h-full object-cover scale-105"
               />
-              <div className="absolute inset-0 bg-foreground/75 backdrop-blur-md" />
+              <div className="absolute inset-0 bg-foreground/55" />
             </div>
 
             {/* Close button */}
