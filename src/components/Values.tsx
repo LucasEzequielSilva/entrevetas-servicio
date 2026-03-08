@@ -9,9 +9,6 @@ const Values = () => {
     { number: "02", title: t("values.2.title"), description: t("values.2.desc") },
     { number: "03", title: t("values.3.title"), description: t("values.3.desc") },
     { number: "04", title: t("values.4.title"), description: t("values.4.desc") },
-    { number: "05", title: t("values.5.title"), description: t("values.5.desc") },
-    { number: "06", title: t("values.6.title"), description: t("values.6.desc") },
-    { number: "07", title: t("values.7.title"), description: t("values.7.desc") },
   ];
 
   return (
