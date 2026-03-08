@@ -30,7 +30,7 @@ const ExteriorsCTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-serif text-3xl md:text-5xl lg:text-6xl text-primary-foreground tracking-tight leading-[1.1] mb-6"
+            className="font-serif text-[24px] md:text-[30px] lg:text-[36px] text-primary-foreground tracking-tight leading-[1.1] mb-5"
           >
             {t("exteriors.title")}
           </motion.h2>
