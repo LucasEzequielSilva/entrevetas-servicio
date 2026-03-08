@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import heroImage from "@/assets/hero-carpentry.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import navLogo from "@/assets/ev-logo-full.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -28,9 +28,12 @@ const Hero = () => {
       className="relative min-h-screen flex items-end pb-20 md:pb-32 overflow-hidden p-4 md:p-6"
     >
       <motion.div className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl overflow-hidden" style={{ y: imageY, scale: imageScale }}>
-        <img
-          src={heroImage}
-          alt="Taller de carpintería artesanal"
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
         />
         <motion.div
