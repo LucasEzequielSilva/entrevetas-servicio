@@ -15,6 +15,12 @@ const navLinks = [
   { key: "nav.contact", href: "#contact" },
 ] as const;
 
+const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  e.preventDefault();
+  const el = document.querySelector(href);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 const Hero = () => {
   const { t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
