@@ -22,19 +22,19 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-24 md:py-40 px-6 md:px-16 bg-card">
+    <section id="gallery" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-card">
       <div className="max-w-7xl mx-auto">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-sm tracking-widest uppercase text-muted-foreground mb-16"
+          className="text-sm tracking-widest uppercase text-muted-foreground mb-10 md:mb-12"
         >
           {t("gallery.label")}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[280px] md:auto-rows-[320px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 auto-rows-[260px] md:auto-rows-[300px]">
           {projects.map((project, i) => (
             <motion.div
               key={i}

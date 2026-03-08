@@ -11,14 +11,14 @@ const Values = () => {
   ];
 
   return (
-    <section id="values" className="py-24 md:py-40 px-6 md:px-16">
+    <section id="values" className="py-14 md:py-20 lg:py-24 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-16"
+          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-10 md:mb-12"
         >
           {t("values.label")}
         </motion.p>

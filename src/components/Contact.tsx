@@ -8,14 +8,14 @@ const Contact = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
   return (
-    <section id="contact" className="py-24 md:py-40 px-6 md:px-16 bg-foreground overflow-hidden">
+    <section id="contact" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-foreground overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-3xl md:text-5xl lg:text-6xl text-primary-foreground tracking-tight mb-12 leading-tight"
+          className="text-[24px] md:text-[30px] lg:text-[36px] text-primary-foreground tracking-tight mb-8 leading-tight"
         >
           {t("contact.title")}
         </motion.h2>

@@ -13,7 +13,7 @@ const ProjectTypes = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 md:py-40 px-6 md:px-16">
+    <section id="projects" className="py-14 md:py-20 lg:py-24 px-6 md:px-16">
       <div className="max-w-4xl mx-auto">
         <motion.p
           initial={{ opacity: 0 }}
@@ -29,7 +29,7 @@ const ProjectTypes = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-3xl md:text-5xl tracking-tight mb-16 md:mb-24 leading-tight"
+          className="text-[24px] md:text-[30px] lg:text-[36px] tracking-tight mb-10 md:mb-16 leading-tight"
         >
           {t("projects.title")}
         </motion.h2>

@@ -6,8 +6,8 @@ const AboutDino = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-24 md:py-32 px-6 md:px-16 bg-background">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+    <section id="about" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-background">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -32,7 +32,7 @@ const AboutDino = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.1] mb-8">
+          <h2 className="text-[24px] md:text-[30px] lg:text-[36px] tracking-tight leading-[1.1] mb-6">
             {t("about.title")}
           </h2>
 
