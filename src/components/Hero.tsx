@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent } from "framer-motion";
 import { useRef, useState } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
 import navLogo from "@/assets/ev-logo-full.png";
