@@ -92,6 +92,15 @@ export const translations: Record<Language, Record<string, string>> = {
     "values.3.title": "Master Craftsmanship",
     "values.3.desc": "Traditional joinery meets contemporary precision. Our workshop combines hand techniques with modern engineering.",
 
+    // About
+    "about.label": "About Dino",
+    "about.title": "About Dino",
+    "about.p1": "Entre Vetas was born from the desire to dedicate myself to what I truly love: working with wood.",
+    "about.p2": "My journey began in Argentina and continues today in Spain, always linked to design, installation, and restoration across different types of projects.",
+    "about.p3": "The name reflects the essence of the project: each piece of wood tells its own story through its grain. Unique, unrepeatable lines shaped by years of growth and resilience. That's why I work respecting the material and adapting each project to the space and its real use.",
+    "about.p4": "I enjoy every stage of the process: envisioning the space, choosing the right material, and executing every detail with care. I believe in work done well, in craftsmanship, and in finishes built to last.",
+    "about.p5": "Every project is personalised, with close guidance and no-obligation quotes.",
+
     // Gallery
     "gallery.label": "Selected work",
     "gallery.1": "Wood lattice",
