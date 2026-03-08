@@ -39,13 +39,9 @@ const AboutDino = () => {
             {t("about.title")}
           </h2>
 
-          <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
-            <p>{t("about.p1")}</p>
-            <p>{t("about.p2")}</p>
-            <p>{t("about.p3")}</p>
-            <p>{t("about.p4")}</p>
-            <p>{t("about.p5")}</p>
-          </div>
+          <p className="text-muted-foreground leading-relaxed text-[15px]">
+            {t("about.text")}
+          </p>
 
           <p className="mt-8 text-sm font-medium tracking-wide text-foreground">
             — Dino Monteleone
