@@ -24,7 +24,7 @@ const Values = () => {
           {t("values.label")}
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 md:gap-x-16 gap-y-14 md:gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 md:gap-x-16 gap-y-14 md:gap-y-16">
           {values.map((value, i) => (
             <motion.div
               key={value.number}
