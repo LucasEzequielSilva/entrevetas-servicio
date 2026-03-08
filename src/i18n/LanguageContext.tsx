@@ -7,6 +7,7 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
