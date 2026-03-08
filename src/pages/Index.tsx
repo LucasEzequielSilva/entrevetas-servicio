@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Values from "@/components/Values";
+import AboutDino from "@/components/AboutDino";
 import Gallery from "@/components/Gallery";
 import Process from "@/components/Process";
 import ExteriorsCTA from "@/components/ExteriorsCTA";
