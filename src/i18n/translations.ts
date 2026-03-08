@@ -2,11 +2,11 @@ export type Language = "es" | "en" | "de" | "nl" | "fr";
 
 export const translations: Record<Language, Record<string, string>> = {
   es: {
-    // Nav
-    "nav.contact": "Contacto",
-    "nav.services": "Servicios",
-    "nav.about": "Sobre Dino",
+    "nav.gallery": "Trabajos",
+    "nav.projects": "Proyectos",
     "nav.process": "Proceso",
+    "nav.about": "Sobre Dino",
+    "nav.contact": "Contacto",
 
     // Hero
     "hero.title": "Carpintería y paisajismo en Altea",
@@ -70,10 +70,11 @@ export const translations: Record<Language, Record<string, string>> = {
     "footer.location": "Altea, España",
   },
   en: {
-    "nav.contact": "Contact",
-    "nav.services": "Services",
-    "nav.about": "About Dino",
+    "nav.gallery": "Work",
+    "nav.projects": "Projects",
     "nav.process": "Process",
+    "nav.about": "About Dino",
+    "nav.contact": "Contact",
     "hero.title": "Carpentry and landscaping in Altea",
     "hero.subtitle": "Handcrafted wood design for indoor and outdoor spaces.",
     "hero.whatsapp": "Chat on WhatsApp",
@@ -119,10 +120,11 @@ export const translations: Record<Language, Record<string, string>> = {
     "footer.location": "Altea, Spain",
   },
   de: {
-    "nav.contact": "Kontakt",
-    "nav.services": "Leistungen",
-    "nav.about": "Über Dino",
+    "nav.gallery": "Arbeiten",
+    "nav.projects": "Projekte",
     "nav.process": "Prozess",
+    "nav.about": "Über Dino",
+    "nav.contact": "Kontakt",
     "hero.title": "Schreinerei und Landschaftsbau in Altea",
     "hero.subtitle": "Handwerkliches Holzdesign für Innen- und Außenräume.",
     "hero.whatsapp": "Auf WhatsApp schreiben",
@@ -168,10 +170,11 @@ export const translations: Record<Language, Record<string, string>> = {
     "footer.location": "Altea, Spanien",
   },
   nl: {
-    "nav.contact": "Contact",
-    "nav.services": "Diensten",
-    "nav.about": "Over Dino",
+    "nav.gallery": "Werk",
+    "nav.projects": "Projecten",
     "nav.process": "Proces",
+    "nav.about": "Over Dino",
+    "nav.contact": "Contact",
     "hero.title": "Timmerwerk en tuinaanleg in Altea",
     "hero.subtitle": "Ambachtelijk houtontwerp voor binnen en buiten.",
     "hero.whatsapp": "Chat op WhatsApp",
@@ -217,10 +220,11 @@ export const translations: Record<Language, Record<string, string>> = {
     "footer.location": "Altea, Spanje",
   },
   fr: {
-    "nav.contact": "Contact",
-    "nav.services": "Services",
-    "nav.about": "À propos de Dino",
+    "nav.gallery": "Travaux",
+    "nav.projects": "Projets",
     "nav.process": "Processus",
+    "nav.about": "À propos de Dino",
+    "nav.contact": "Contact",
     "hero.title": "Menuiserie et paysagisme à Altea",
     "hero.subtitle": "Design artisanal en bois pour intérieur et extérieur.",
     "hero.whatsapp": "Écrire sur WhatsApp",
