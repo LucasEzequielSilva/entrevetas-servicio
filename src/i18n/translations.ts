@@ -101,12 +101,20 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Values
     "values.label": "What defines us",
-    "values.1.title": "Noble Materials",
-    "values.1.desc": "We work exclusively with sustainably sourced European hardwoods — oak, walnut, ash — selected for character and longevity.",
-    "values.2.title": "Custom Design",
-    "values.2.desc": "Every piece is drawn to your space. No catalogue, no standard sizes. Each project begins with your architecture.",
-    "values.3.title": "Master Craftsmanship",
-    "values.3.desc": "Traditional joinery meets contemporary precision. Our workshop combines hand techniques with modern engineering.",
+    "values.1.title": "Detail & finishes",
+    "values.1.desc": "We care for what's seen and what's not. Every finish is designed to last and look impeccable.",
+    "values.2.title": "Precision in lines & measurements",
+    "values.2.desc": "We work with exact measurements so every piece fits perfectly in your space.",
+    "values.3.title": "Climate awareness",
+    "values.3.desc": "Sun, humidity, wind, sea — we adapt materials and techniques to each environment's real conditions.",
+    "values.4.title": "Durability",
+    "values.4.desc": "Do it once, and make it last. Every project is executed so you never need to redo it.",
+    "values.5.title": "Right materials",
+    "values.5.desc": "We choose the right materials and care for every detail, down to properly placed hardware.",
+    "values.6.title": "Clean finish",
+    "values.6.desc": "When we're done, the space is clean and ready to use. No traces of work left behind.",
+    "values.7.title": "Recommended maintenance",
+    "values.7.desc": "We advise an annual touch-up or repaint to keep every project in optimal condition.",
 
     // About
     "about.label": "About Dino",
