@@ -38,7 +38,10 @@ const Hero = () => {
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 80));
+  useMotionValueEvent(scrollY, "change", (v) => {
+    const heroH = sectionRef.current?.offsetHeight ?? 800;
+    setScrolled(v > heroH - 100);
+  });
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
@@ -63,8 +66,26 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
       </motion.div>
 
+      {/* Hero-only Nav (transparent, visible in hero) */}
+      <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-6">
+        <img src={navLogo} alt="Entre Vetas" className="h-10 md:h-12 w-auto" />
+        <div className="flex items-center gap-6 md:gap-8">
+          {navLinks.map((link) => (
+            <a key={link.key} href={link.href} onClick={(e) => smoothScroll(e, link.href)}
+              className="hidden min-[900px]:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300"
+            >{t(link.key)}</a>
+          ))}
+          <LanguageSwitcher />
+          <button onClick={() => setMenuOpen(true)} className="min-[900px]:hidden flex flex-col justify-center items-center gap-[6px] p-1" aria-label="Open menu">
+            <span className="block w-[28px] h-[2.5px] bg-primary-foreground rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-primary-foreground rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-primary-foreground rounded-sm" />
+          </button>
+        </div>
+      </nav>
+
       {/* Sticky Nav */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 transition-all duration-700 ease-out ${scrolled ? "py-3 bg-foreground/60 backdrop-blur-xl shadow-[0_1px_0_0_rgba(255,255,255,0.05)]" : "py-6"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-3 transition-all duration-700 ease-out bg-foreground/60 backdrop-blur-xl shadow-[0_1px_0_0_rgba(255,255,255,0.05)] ${scrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
         <motion.img
           src={navLogo}
           alt="Entre Vetas"
