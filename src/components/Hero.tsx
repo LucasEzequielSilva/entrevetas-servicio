@@ -144,7 +144,7 @@ const Hero = () => {
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
                       transition={{ delay: 0.08 * i + 0.1, duration: 0.4 }}
-                      className="block w-8 h-px bg-primary-foreground/20 my-4"
+                      className="block w-6 h-[1.5px] bg-primary-foreground/25 my-5"
                     />
                   )}
                   <motion.a
