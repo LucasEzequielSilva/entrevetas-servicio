@@ -7,7 +7,7 @@ const AboutDino = () => {
 
   return (
     <section id="about" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-background">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
