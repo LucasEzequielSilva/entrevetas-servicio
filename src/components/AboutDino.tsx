@@ -32,16 +32,17 @@ const AboutDino = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4 block">
-            {t("about.label")}
-          </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.1] mb-8">
             {t("about.title")}
           </h2>
 
-          <p className="text-muted-foreground leading-relaxed text-[15px]">
-            {t("about.text")}
-          </p>
+          <div className="space-y-4 text-muted-foreground leading-relaxed text-[15px]">
+            <p>{t("about.p1")}</p>
+            <p>{t("about.p2")}</p>
+            <p>{t("about.p3")}</p>
+            <p>{t("about.p4")}</p>
+            <p>{t("about.p5")}</p>
+          </div>
 
           <p className="mt-8 text-sm font-medium tracking-wide text-foreground">
             — Dino Monteleone
