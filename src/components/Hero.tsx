@@ -78,6 +78,7 @@ const Hero = () => {
             <a
               key={link.key}
               href={link.href}
+              onClick={(e) => smoothScroll(e, link.href)}
               className="hidden min-[900px]:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300"
             >
               {t(link.key)}
