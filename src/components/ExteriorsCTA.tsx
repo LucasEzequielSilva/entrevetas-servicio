@@ -40,7 +40,7 @@ const ExteriorsCTA = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-primary-foreground/60 font-light text-lg leading-relaxed"
+            className="text-primary-foreground/60 font-light text-base md:text-lg leading-relaxed"
           >
             {t("exteriors.desc")}
           </motion.p>

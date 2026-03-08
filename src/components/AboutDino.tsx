@@ -32,7 +32,7 @@ const AboutDino = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.1] mb-8">
+          <h2 className="text-[24px] md:text-[30px] lg:text-[36px] tracking-tight leading-[1.1] mb-6">
             {t("about.title")}
           </h2>
 
