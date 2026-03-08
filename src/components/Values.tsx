@@ -11,7 +11,7 @@ const Values = () => {
   ];
 
   return (
-    <section id="values" className="py-24 md:py-40 px-6 md:px-16">
+    <section id="values" className="py-14 md:py-20 lg:py-24 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
         <motion.p
           initial={{ opacity: 0 }}
