@@ -59,14 +59,17 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex items-center gap-6 md:gap-8"
         >
-          <a href="#values" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-            {t("nav.services")}
-          </a>
           <a href="#gallery" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
-            {t("nav.about")}
+            {t("nav.gallery")}
+          </a>
+          <a href="#projects" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
+            {t("nav.projects")}
           </a>
           <a href="#process" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
             {t("nav.process")}
+          </a>
+          <a href="#about" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
+            {t("nav.about")}
           </a>
           <a href="#contact" className="hidden md:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300">
             {t("nav.contact")}
