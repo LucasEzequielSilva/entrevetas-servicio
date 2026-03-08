@@ -37,6 +37,9 @@ const Hero = () => {
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.3, 0.7]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 80));
+
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
   return (
