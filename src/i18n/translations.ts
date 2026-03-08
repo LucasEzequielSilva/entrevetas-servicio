@@ -16,20 +16,14 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Values
     "values.label": "Lo que nos define",
-    "values.1.title": "Detalle y terminaciones",
-    "values.1.desc": "Cuidamos lo que se ve y lo que no se ve. Cada terminación está pensada para durar y verse impecable.",
-    "values.2.title": "Precisión en líneas y medidas",
-    "values.2.desc": "Trabajamos con mediciones exactas para que cada pieza encaje perfectamente en tu espacio.",
-    "values.3.title": "Criterio por clima",
-    "values.3.desc": "Sol, humedad, viento, mar — adaptamos materiales y técnicas a las condiciones reales de cada entorno.",
-    "values.4.title": "Durabilidad",
-    "values.4.desc": "Hacerlo una sola vez, y que dure. Cada proyecto se ejecuta para que no necesites volver a intervenir.",
-    "values.5.title": "Materiales correctos",
-    "values.5.desc": "Elegimos los materiales adecuados y cuidamos cada detalle, hasta la tornillería bien colocada.",
-    "values.6.title": "Trabajo limpio",
-    "values.6.desc": "Al terminar, dejamos el espacio limpio y listo para usar. Sin rastros de obra.",
-    "values.7.title": "Mantenimiento recomendado",
-    "values.7.desc": "Aconsejamos un repaso o pintura anual para mantener cada trabajo en óptimas condiciones.",
+    "values.1.title": "Precisión en medidas",
+    "values.1.desc": "Todo encaja perfecto.",
+    "values.2.title": "Materiales correctos",
+    "values.2.desc": "Elegidos para durar.",
+    "values.3.title": "Terminaciones cuidadas",
+    "values.3.desc": "Cada detalle importa.",
+    "values.4.title": "Trabajo limpio",
+    "values.4.desc": "El espacio queda listo para usar.",
 
     // About
     "about.label": "Sobre Dino",
