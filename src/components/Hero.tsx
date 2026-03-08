@@ -38,7 +38,10 @@ const Hero = () => {
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 80));
+  useMotionValueEvent(scrollY, "change", (v) => {
+    const heroH = sectionRef.current?.offsetHeight ?? 800;
+    setScrolled(v > heroH - 100);
+  });
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
