@@ -16,12 +16,20 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Values
     "values.label": "Lo que nos define",
-    "values.1.title": "Materiales Nobles",
-    "values.1.desc": "Trabajamos exclusivamente con maderas europeas de origen sostenible — roble, nogal, fresno — seleccionadas por su carácter y durabilidad.",
-    "values.2.title": "Diseño a Medida",
-    "values.2.desc": "Cada pieza se diseña para tu espacio. Sin catálogo, sin medidas estándar. Cada proyecto nace de tu arquitectura.",
-    "values.3.title": "Maestría Artesanal",
-    "values.3.desc": "Ebanistería tradicional con precisión contemporánea. Nuestro taller combina técnicas manuales con ingeniería moderna.",
+    "values.1.title": "Detalle y terminaciones",
+    "values.1.desc": "Cuidamos lo que se ve y lo que no se ve. Cada terminación está pensada para durar y verse impecable.",
+    "values.2.title": "Precisión en líneas y medidas",
+    "values.2.desc": "Trabajamos con mediciones exactas para que cada pieza encaje perfectamente en tu espacio.",
+    "values.3.title": "Criterio por clima",
+    "values.3.desc": "Sol, humedad, viento, mar — adaptamos materiales y técnicas a las condiciones reales de cada entorno.",
+    "values.4.title": "Durabilidad",
+    "values.4.desc": "Hacerlo una sola vez, y que dure. Cada proyecto se ejecuta para que no necesites volver a intervenir.",
+    "values.5.title": "Materiales correctos",
+    "values.5.desc": "Elegimos los materiales adecuados y cuidamos cada detalle, hasta la tornillería bien colocada.",
+    "values.6.title": "Trabajo limpio",
+    "values.6.desc": "Al terminar, dejamos el espacio limpio y listo para usar. Sin rastros de obra.",
+    "values.7.title": "Mantenimiento recomendado",
+    "values.7.desc": "Aconsejamos un repaso o pintura anual para mantener cada trabajo en óptimas condiciones.",
 
     // About
     "about.label": "Sobre Dino",
