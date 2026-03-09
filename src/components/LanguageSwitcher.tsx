@@ -27,11 +27,15 @@ const LanguageSwitcher = ({ variant = "default" }: { variant?: "default" | "stic
 
   const current = languages.find((l) => l.code === language)!;
 
+  const stickyMobileClass = variant === "sticky"
+    ? "text-[oklch(44.6%_0.043_257.281)] min-[900px]:text-primary-foreground/80 hover:min-[900px]:text-primary-foreground"
+    : "text-primary-foreground/80 hover:text-primary-foreground";
+
   return (
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300"
+        className={`flex items-center gap-1.5 text-sm transition-colors duration-300 ${stickyMobileClass}`}
       >
         <Globe className="w-4 h-4" />
         <span className="tracking-widest uppercase">{current.label}</span>
