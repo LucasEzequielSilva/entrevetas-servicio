@@ -12,7 +12,7 @@ const languages: { code: Language; label: string; name: string }[] = [
   { code: "fr", label: "FR", name: "Français" },
 ];
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ variant = "default" }: { variant?: "default" | "sticky" }) => {
   const { language, setLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
