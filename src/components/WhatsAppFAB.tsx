@@ -1,7 +1,7 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
 
-const WHATSAPP_NUMBER = "34600000000";
+const WHATSAPP_NUMBER = "34611457391";
 
 const WhatsAppFAB = () => {
   const [visible, setVisible] = useState(false);
