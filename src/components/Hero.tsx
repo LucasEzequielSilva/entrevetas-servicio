@@ -118,9 +118,9 @@ const Hero = () => {
             className="min-[900px]:hidden flex flex-col justify-center items-center gap-[6px] p-1"
             aria-label="Open menu"
           >
-            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] min-[900px]:bg-primary-foreground rounded-sm" />
-            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] min-[900px]:bg-primary-foreground rounded-sm" />
-            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] min-[900px]:bg-primary-foreground rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
           </button>
         </motion.div>
       </nav>

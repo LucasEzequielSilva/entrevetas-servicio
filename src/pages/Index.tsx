@@ -7,11 +7,13 @@ import Process from "@/components/Process";
 import ExteriorsCTA from "@/components/ExteriorsCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppFAB from "@/components/WhatsAppFAB";
 
 const Index = () => {
   return (
     <main className="bg-background">
       <Hero />
+      <WhatsAppFAB />
       <Values />
       <AboutDino />
       <Gallery />

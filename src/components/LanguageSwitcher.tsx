@@ -28,7 +28,7 @@ const LanguageSwitcher = ({ variant = "default" }: { variant?: "default" | "stic
   const current = languages.find((l) => l.code === language)!;
 
   const stickyMobileClass = variant === "sticky"
-    ? "text-[oklch(44.6%_0.043_257.281)] min-[900px]:text-primary-foreground/80 hover:min-[900px]:text-primary-foreground"
+    ? "text-[oklch(44.6%_0.043_257.281)] hover:text-foreground"
     : "text-primary-foreground/80 hover:text-primary-foreground";
 
   return (
