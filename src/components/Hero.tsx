@@ -92,7 +92,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-10 md:h-12 w-auto"
+          className="h-[45px] w-auto"
         />
         <motion.div
           initial={{ opacity: 0, x: 20 }}
