@@ -85,7 +85,7 @@ const Hero = () => {
       </nav>
 
       {/* Sticky Nav */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-3 transition-all duration-700 ease-out bg-white min-[900px]:bg-foreground/60 min-[900px]:backdrop-blur-xl shadow-sm min-[900px]:shadow-[0_1px_0_0_rgba(255,255,255,0.05)] ${scrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-3 transition-all duration-700 ease-out bg-white shadow-sm ${scrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
         <motion.img
           src={navLogo}
           alt="Entre Vetas"
@@ -105,7 +105,7 @@ const Hero = () => {
               key={link.key}
               href={link.href}
               onClick={(e) => smoothScroll(e, link.href)}
-              className="hidden min-[900px]:inline text-sm tracking-widest uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300"
+              className="hidden min-[900px]:inline text-sm tracking-widest uppercase text-[oklch(44.6%_0.043_257.281)] hover:text-foreground transition-colors duration-300"
             >
               {t(link.key)}
             </a>
@@ -118,9 +118,9 @@ const Hero = () => {
             className="min-[900px]:hidden flex flex-col justify-center items-center gap-[6px] p-1"
             aria-label="Open menu"
           >
-            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] min-[900px]:bg-primary-foreground rounded-sm" />
-            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] min-[900px]:bg-primary-foreground rounded-sm" />
-            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] min-[900px]:bg-primary-foreground rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
+            <span className="block w-[28px] h-[2.5px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
           </button>
         </motion.div>
       </nav>
