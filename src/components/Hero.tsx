@@ -6,7 +6,7 @@ import navLogo from "@/assets/ev-logo-wood.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const WHATSAPP_NUMBER = "34600000000";
+const WHATSAPP_NUMBER = "34611457391";
 
 const navLinks = [
   { key: "nav.gallery", href: "#gallery" },

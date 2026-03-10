@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const WHATSAPP_NUMBER = "34600000000";
+const WHATSAPP_NUMBER = "34611457391";
 
 const Contact = () => {
   const { t } = useLanguage();
