@@ -2,7 +2,8 @@ import React from "react";
 import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent } from "framer-motion";
 import { useRef, useState } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
-import navLogo from "@/assets/ev-logo-dark.png";
+import navLogoDark from "@/assets/ev-logo-dark.png";
+import navLogoWhite from "@/assets/ev-logo-white.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -68,7 +69,7 @@ const Hero = () => {
 
       {/* Hero-only Nav (transparent, visible in hero) */}
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-6">
-        <img src={navLogo} alt="Entre Vetas" className="h-[45px] w-auto" />
+        <img src={navLogoWhite} alt="Entre Vetas" className="h-[45px] w-auto" />
         <div className="flex items-center gap-6 md:gap-8">
           {navLinks.map((link) => (
             <a key={link.key} href={link.href} onClick={(e) => smoothScroll(e, link.href)}
@@ -87,7 +88,7 @@ const Hero = () => {
       {/* Sticky Nav */}
       <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-3 transition-all duration-700 ease-out bg-white shadow-sm ${scrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
         <motion.img
-          src={navLogo}
+          src={navLogoDark}
           alt="Entre Vetas"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
