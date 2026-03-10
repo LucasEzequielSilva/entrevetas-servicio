@@ -2,7 +2,8 @@ import React from "react";
 import { motion, useScroll, useTransform, AnimatePresence, useMotionValueEvent } from "framer-motion";
 import { useRef, useState } from "react";
 import heroVideo from "@/assets/hero-video.mp4";
-import navLogo from "@/assets/ev-logo-dark.png";
+import navLogoDark from "@/assets/ev-logo-dark.png";
+import navLogoWhite from "@/assets/ev-logo-white.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
