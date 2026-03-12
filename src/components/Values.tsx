@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
+import iconRuler from "@/assets/icon-ruler.png";
+import iconToolbox from "@/assets/icon-toolbox.png";
+import iconSaw from "@/assets/icon-saw.png";
 
 const Values = () => {
   const { t } = useLanguage();
 
   const values = [
-    { number: "01", icon: "📐", title: t("values.1.title"), description: t("values.1.desc") },
-    { number: "02", icon: "🪵", title: t("values.2.title"), description: t("values.2.desc") },
-    { number: "03", icon: "🪚", title: t("values.3.title"), description: t("values.3.desc") },
+    { number: "01", icon: iconRuler, title: t("values.1.title"), description: t("values.1.desc") },
+    { number: "02", icon: iconToolbox, title: t("values.2.title"), description: t("values.2.desc") },
+    { number: "03", icon: iconSaw, title: t("values.3.title"), description: t("values.3.desc") },
   ];
 
   return (
@@ -34,7 +37,7 @@ const Values = () => {
               className="group"
             >
               <div className="flex items-center gap-3 mb-1">
-                <span className="text-2xl">{value.icon}</span>
+                <img src={value.icon} alt="" className="w-8 h-8 object-contain" />
                 <span className="text-xs text-accent/60 font-light tracking-[0.2em]">
                   {value.number}
                 </span>
