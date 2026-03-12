@@ -5,6 +5,7 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import video1 from "@/assets/video-1.mp4";
 import video2 from "@/assets/video-2.mp4";
+import galleryBg from "@/assets/gallery-bg.mp4";
 
 type GalleryItem =
   | { type: "image"; src: string; alt: string; labelKey: string; span?: string }
@@ -22,8 +23,18 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-card">
-      <div className="max-w-7xl mx-auto">
+    <section id="gallery" className="relative py-14 md:py-20 lg:py-24 px-6 md:px-16 overflow-hidden">
+      {/* Background video */}
+      <video
+        src={galleryBg}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
