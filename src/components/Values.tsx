@@ -5,9 +5,9 @@ const Values = () => {
   const { t } = useLanguage();
 
   const values = [
-    { number: "01", title: t("values.1.title"), description: t("values.1.desc") },
-    { number: "02", title: t("values.2.title"), description: t("values.2.desc") },
-    { number: "03", title: t("values.3.title"), description: t("values.3.desc") },
+    { number: "01", icon: "📐", title: t("values.1.title"), description: t("values.1.desc") },
+    { number: "02", icon: "🪵", title: t("values.2.title"), description: t("values.2.desc") },
+    { number: "03", icon: "🪚", title: t("values.3.title"), description: t("values.3.desc") },
   ];
 
   return (
