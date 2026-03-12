@@ -5,6 +5,7 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
 import video1 from "@/assets/video-1.mp4";
 import video2 from "@/assets/video-2.mp4";
+import galleryBg from "@/assets/gallery-bg.mp4";
 
 type GalleryItem =
   | { type: "image"; src: string; alt: string; labelKey: string; span?: string }
