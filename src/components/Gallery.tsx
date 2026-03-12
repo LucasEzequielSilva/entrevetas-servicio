@@ -23,7 +23,17 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-14 md:py-20 lg:py-24 px-6 md:px-16 bg-card">
+    <section id="gallery" className="relative py-14 md:py-20 lg:py-24 px-6 md:px-16 overflow-hidden">
+      {/* Background video */}
+      <video
+        src={galleryBg}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
       <div className="max-w-7xl mx-auto">
         <motion.p
           initial={{ opacity: 0 }}
