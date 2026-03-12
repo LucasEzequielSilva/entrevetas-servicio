@@ -40,10 +40,19 @@ const Gallery = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-sm tracking-widest uppercase text-muted-foreground mb-10 md:mb-12"
+          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4"
         >
           {t("gallery.label")}
         </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="text-[28px] md:text-[34px] lg:text-[40px] tracking-tight mb-10 md:mb-12 text-foreground"
+        >
+          {t("gallery.title") || "Trabajos realizados"}
+        </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 auto-rows-[260px] md:auto-rows-[300px]">
           {projects.map((project, i) => (

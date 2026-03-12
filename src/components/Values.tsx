@@ -33,9 +33,12 @@ const Values = () => {
               transition={{ duration: 0.7, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="group"
             >
-              <span className="text-xs text-accent/60 font-light tracking-[0.2em]">
-                {value.number}
-              </span>
+              <div className="flex items-center gap-3 mb-1">
+                <span className="text-2xl">{value.icon}</span>
+                <span className="text-xs text-accent/60 font-light tracking-[0.2em]">
+                  {value.number}
+                </span>
+              </div>
               <div className="h-[1px] w-0 group-hover:w-10 bg-accent/40 mt-3 mb-4 transition-all duration-500 ease-out" />
               <h3 className="text-lg md:text-xl mb-3 tracking-tight">
                 {value.title}

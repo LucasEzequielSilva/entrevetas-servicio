@@ -24,17 +24,6 @@ const Contact = () => {
       <div className="absolute inset-0 backdrop-blur-[2px]" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Label */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-xs tracking-[0.3em] uppercase text-accent mb-4"
-        >
-          {t("contact.label") || "Contacto"}
-        </motion.p>
-
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
