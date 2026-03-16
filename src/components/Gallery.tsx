@@ -8,18 +8,18 @@ import video2 from "@/assets/video-2.mp4";
 import galleryBg from "@/assets/gallery-bg.mp4";
 
 type GalleryItem =
-  | { type: "image"; src: string; alt: string; labelKey: string; span?: string }
-  | { type: "video"; src: string; labelKey: string; span?: string };
+  | { type: "image"; src: string; alt: string; labelKey: string; altKey: string; span?: string }
+  | { type: "video"; src: string; labelKey: string; altKey: string; span?: string };
 
 const Gallery = () => {
   const { t } = useLanguage();
 
   const projects: GalleryItem[] = [
-    { type: "image", src: gallery1, alt: "Celosía de listones de madera", labelKey: "gallery.1", span: "md:col-span-2 md:row-span-2" },
-    { type: "image", src: gallery2, alt: "Altillo de madera maciza", labelKey: "gallery.2" },
-    { type: "video", src: video1, labelKey: "gallery.5" },
-    { type: "image", src: gallery3, alt: "Restauración de mesa", labelKey: "gallery.3", span: "md:col-span-2" },
-    { type: "video", src: video2, labelKey: "gallery.6" },
+    { type: "image", src: gallery1, alt: "Celosía de listones de madera", labelKey: "gallery.1", altKey: "gallery.1.alt", span: "md:col-span-2 md:row-span-2" },
+    { type: "image", src: gallery2, alt: "Altillo de madera maciza", labelKey: "gallery.2", altKey: "gallery.2.alt" },
+    { type: "video", src: video1, labelKey: "gallery.5", altKey: "gallery.5.alt" },
+    { type: "image", src: gallery3, alt: "Restauración de mesa", labelKey: "gallery.3", altKey: "gallery.3.alt", span: "md:col-span-2" },
+    { type: "video", src: video2, labelKey: "gallery.6", altKey: "gallery.6.alt" },
   ];
 
   return (
@@ -51,7 +51,7 @@ const Gallery = () => {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-[28px] md:text-[34px] lg:text-[40px] tracking-tight mb-10 md:mb-12 text-foreground"
         >
-          {t("gallery.title") || "Trabajos realizados"}
+          {t("gallery.title")}
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 auto-rows-[260px] md:auto-rows-[300px]">
@@ -67,7 +67,7 @@ const Gallery = () => {
               {project.type === "image" ? (
                 <img
                   src={project.src}
-                  alt={project.alt}
+                  alt={t(project.altKey)}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
@@ -79,6 +79,7 @@ const Gallery = () => {
                   playsInline
                   autoPlay
                   ref={(el) => { if (el) el.playbackRate = 1; }}
+                  aria-label={t(project.altKey)}
                   className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
               )}
