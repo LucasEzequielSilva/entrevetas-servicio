@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import servicePergola from "@/assets/service-pergola.jpg";
+import serviceDeck from "@/assets/service-deck.jpg";
+import serviceInterior from "@/assets/service-interior.jpg";
 
 const Services = () => {
   const { t } = useLanguage();
 
   const services = [
-    { image: gallery4, titleKey: "services.1.title", descKey: "services.1.desc", altKey: "services.1.alt" },
-    { image: gallery5, titleKey: "services.2.title", descKey: "services.2.desc", altKey: "services.2.alt" },
-    { image: gallery6, titleKey: "services.3.title", descKey: "services.3.desc", altKey: "services.3.alt" },
+    { image: servicePergola, titleKey: "services.1.title", descKey: "services.1.desc", altKey: "services.1.alt" },
+    { image: serviceDeck, titleKey: "services.2.title", descKey: "services.2.desc", altKey: "services.2.alt" },
+    { image: serviceInterior, titleKey: "services.3.title", descKey: "services.3.desc", altKey: "services.3.alt" },
   ];
 
   return (
