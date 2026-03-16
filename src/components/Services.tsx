@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import servicePergola from "@/assets/service-pergola.jpg";
+import serviceDeck from "@/assets/service-deck.jpg";
+import serviceInterior from "@/assets/service-interior.jpg";
 
 const Services = () => {
   const { t } = useLanguage();
