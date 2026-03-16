@@ -9,7 +9,6 @@ const Process = () => {
     { number: "02", title: t("process.2.title") },
     { number: "03", title: t("process.3.title") },
     { number: "04", title: t("process.4.title") },
-    { number: "05", title: t("process.5.title") },
   ];
 
   return (
