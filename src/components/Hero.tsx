@@ -10,8 +10,8 @@ import LanguageSwitcher from "./LanguageSwitcher";
 const WHATSAPP_NUMBER = "34611457391";
 
 const navLinks = [
+  { key: "nav.services", href: "#services" },
   { key: "nav.gallery", href: "#gallery" },
-  { key: "nav.projects", href: "#projects" },
   { key: "nav.process", href: "#process" },
   { key: "nav.about", href: "#about" },
   { key: "nav.contact", href: "#contact" },
