@@ -37,7 +37,7 @@ const Values = () => {
               className="group"
             >
               <div className="flex items-center gap-3 mb-1">
-                <img src={value.icon} alt="" className="w-8 h-8 object-contain" />
+                <img src={value.icon} alt="" className="w-11 h-11 object-contain" />
                 <span className="text-xs text-accent/60 font-light tracking-[0.2em]">
                   {value.number}
                 </span>
