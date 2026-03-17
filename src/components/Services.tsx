@@ -46,11 +46,11 @@ const Services = () => {
               className="group"
             >
               <div className="relative overflow-hidden rounded-xl md:rounded-2xl aspect-[4/3] mb-5">
-                <img
+              <img
                   src={service.image}
                   alt={t(service.altKey)}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+                  className="w-full h-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-700" />
               </div>
