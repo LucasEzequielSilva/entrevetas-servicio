@@ -227,7 +227,7 @@ const Hero = () => {
           </a>
           <a
             href="#gallery"
-            className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground/80 hover:text-primary-foreground hover:border-primary-foreground/60 px-6 h-[52px] rounded-full text-[16px] font-medium transition-all duration-300"
+            className="inline-flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground/80 hover:text-primary-foreground hover:border-primary-foreground/60 px-6 h-[48px] rounded-full text-[15px] font-medium transition-all duration-300"
           >
             {t("hero.services")}
           </a>

@@ -6,11 +6,11 @@ const AboutDino = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="relative py-20 md:py-28 lg:py-32 px-6 md:px-16 bg-card overflow-hidden">
+    <section id="about" className="relative py-[70px] md:py-[100px] lg:py-[120px] px-6 md:px-10 bg-card overflow-hidden">
       {/* Decorative accent line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-20 bg-gradient-to-b from-transparent to-accent/30" />
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center relative">
+      <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center relative">
         {/* Image with layered frame */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -47,12 +47,12 @@ const AboutDino = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-[11px] tracking-[0.3em] uppercase text-accent mb-4"
+            className="text-[12px] tracking-[0.3em] uppercase text-accent mb-4"
           >
             El artesano
           </motion.p>
 
-          <h2 className="text-[38px] md:text-[clamp(42px,4vw,64px)] tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[28px] md:text-[clamp(36px,3.5vw,44px)] tracking-tight leading-[1.1] mb-3">
             {t("about.title")}
           </h2>
 
