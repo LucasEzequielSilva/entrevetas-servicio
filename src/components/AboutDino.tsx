@@ -47,12 +47,12 @@ const AboutDino = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-xs tracking-[0.3em] uppercase text-accent mb-4"
+            className="text-[11px] tracking-[0.3em] uppercase text-accent mb-4"
           >
             El artesano
           </motion.p>
 
-          <h2 className="text-[28px] md:text-[34px] lg:text-[40px] tracking-tight leading-[1.1] mb-3">
+          <h2 className="text-[38px] md:text-[clamp(42px,4vw,64px)] tracking-tight leading-[1.1] mb-3">
             {t("about.title")}
           </h2>
 

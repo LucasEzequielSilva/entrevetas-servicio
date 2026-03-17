@@ -19,7 +19,7 @@ const Process = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4"
+          className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-4"
         >
           {t("process.label")}
         </motion.p>
@@ -28,7 +28,7 @@ const Process = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[24px] md:text-[30px] lg:text-[36px] tracking-tight mb-10 md:mb-16 leading-tight"
+          className="text-[38px] md:text-[clamp(42px,4vw,64px)] tracking-tight mb-10 md:mb-16 leading-tight"
         >
           {t("process.title.1")}
         </motion.h2>
@@ -47,7 +47,7 @@ const Process = () => {
                 {step.number}
               </span>
               <div className="w-1 h-1 rounded-full bg-accent/40 shrink-0" />
-              <h3 className="text-lg md:text-xl tracking-tight text-foreground/80">
+              <h3 className="text-[28px] md:text-[32px] tracking-tight text-foreground/80">
                 {step.title}
               </h3>
             </motion.div>

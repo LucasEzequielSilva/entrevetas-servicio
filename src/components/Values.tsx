@@ -21,7 +21,7 @@ const Values = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-10 md:mb-12"
+          className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-10 md:mb-12"
         >
           {t("values.label")}
         </motion.p>
@@ -37,16 +37,16 @@ const Values = () => {
               className="group"
             >
               <div className="flex items-center gap-3 mb-1">
-                <img src={value.icon} alt="" className="w-8 h-8 object-contain" />
+                <img src={value.icon} alt="" className="w-11 h-11 object-contain" />
                 <span className="text-xs text-accent/60 font-light tracking-[0.2em]">
                   {value.number}
                 </span>
               </div>
               <div className="h-[1px] w-0 group-hover:w-10 bg-accent/40 mt-3 mb-4 transition-all duration-500 ease-out" />
-              <h3 className="text-lg md:text-xl mb-3 tracking-tight">
+              <h3 className="text-[28px] md:text-[32px] mb-3 tracking-tight">
                 {value.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed font-light text-sm">
+              <p className="text-muted-foreground leading-relaxed font-light text-[16px] md:text-[17px]">
                 {value.description}
               </p>
             </motion.div>
