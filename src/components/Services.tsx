@@ -21,7 +21,7 @@ const Services = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4"
+          className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-4"
         >
           {t("services.label")}
         </motion.p>
