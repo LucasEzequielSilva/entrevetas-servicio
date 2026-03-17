@@ -30,7 +30,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[24px] md:text-[30px] lg:text-[36px] tracking-tight mb-10 md:mb-14 leading-tight"
+          className="text-[38px] md:text-[clamp(42px,4vw,64px)] tracking-tight mb-10 md:mb-14 leading-tight"
         >
           {t("services.title")}
         </motion.h2>
