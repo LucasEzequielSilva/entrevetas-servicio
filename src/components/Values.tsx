@@ -14,19 +14,19 @@ const Values = () => {
   ];
 
   return (
-    <section id="values" className="py-14 md:py-20 lg:py-24 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto">
+    <section id="values" className="py-[70px] md:py-[100px] lg:py-[120px] px-6 md:px-10">
+      <div className="max-w-[1300px] mx-auto">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-10 md:mb-12"
+          className="text-[12px] tracking-[0.3em] uppercase text-muted-foreground mb-10 md:mb-12"
         >
           {t("values.label")}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 md:gap-x-16 gap-y-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 md:gap-x-12 lg:gap-x-16 gap-y-14">
           {values.map((value, i) => (
             <motion.div
               key={value.number}
@@ -43,10 +43,10 @@ const Values = () => {
                 </span>
               </div>
               <div className="h-[1px] w-0 group-hover:w-10 bg-accent/40 mt-3 mb-4 transition-all duration-500 ease-out" />
-              <h3 className="text-[28px] md:text-[32px] mb-3 tracking-tight">
+              <h3 className="text-[20px] md:text-[24px] mb-3 tracking-tight">
                 {value.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed font-light text-[16px] md:text-[17px]">
+              <p className="text-muted-foreground leading-relaxed font-light text-[15px] md:text-[16px]">
                 {value.description}
               </p>
             </motion.div>

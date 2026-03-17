@@ -23,7 +23,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="relative py-14 md:py-20 lg:py-24 px-6 md:px-16 overflow-hidden">
+    <section id="gallery" className="relative py-[70px] md:py-[100px] lg:py-[120px] px-6 md:px-10 overflow-hidden">
       {/* Background video */}
       <video
         src={galleryBg}
@@ -34,13 +34,13 @@ const Gallery = () => {
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1300px] mx-auto relative z-10">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground mb-4"
+          className="text-[12px] tracking-[0.3em] uppercase text-muted-foreground mb-4"
         >
           {t("gallery.label")}
         </motion.p>
@@ -49,7 +49,7 @@ const Gallery = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[38px] md:text-[clamp(42px,4vw,64px)] tracking-tight mb-10 md:mb-12 text-foreground"
+          className="text-[28px] md:text-[clamp(36px,3.5vw,44px)] tracking-tight mb-10 md:mb-12 text-foreground"
         >
           {t("gallery.title")}
         </motion.h2>

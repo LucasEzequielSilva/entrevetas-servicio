@@ -5,9 +5,9 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="py-12 px-6 md:px-16 border-t border-border">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <img src={fullLogo} alt="Entre Vetas - Carpintería a medida en Altea" className="h-[45px] w-auto" />
+    <footer className="py-12 px-6 md:px-10 border-t border-border">
+      <div className="max-w-[1300px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <img src={fullLogo} alt="Entre Vetas - Carpintería a medida en Altea" className="h-[36px] w-auto" />
         <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 text-sm text-muted-foreground text-center">
           <span>{t("footer.zone")}</span>
           <span className="hidden md:inline text-border">·</span>

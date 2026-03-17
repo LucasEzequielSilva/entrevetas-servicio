@@ -9,7 +9,7 @@ const Contact = () => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
 
   return (
-    <section id="contact" className="relative py-20 md:py-28 lg:py-32 px-6 md:px-16 overflow-hidden">
+    <section id="contact" className="relative py-[70px] md:py-[100px] lg:py-[120px] px-6 md:px-10 overflow-hidden">
       {/* Video background */}
       <video
         src={galleryBg}
@@ -23,13 +23,13 @@ const Contact = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(30,10%,8%,0.88)] via-[hsl(30,15%,12%,0.85)] to-[hsl(25,20%,10%,0.9)]" />
       <div className="absolute inset-0 backdrop-blur-[2px]" />
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-3xl mx-auto text-center relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[38px] md:text-[clamp(42px,4vw,64px)] text-primary-foreground tracking-tight mb-4 leading-tight"
+          className="text-[28px] md:text-[clamp(36px,3.5vw,44px)] text-primary-foreground tracking-tight mb-4 leading-tight"
         >
           {t("contact.title")}
         </motion.h2>
