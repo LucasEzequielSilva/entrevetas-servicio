@@ -189,12 +189,12 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Hero content */}
-      <motion.div className="relative z-10 px-4 md:px-16 max-w-3xl pt-24 md:pt-0 mb-4 md:mb-0" style={{ y: contentY }}>
+      <motion.div className="relative z-10 px-4 md:px-10 max-w-3xl pt-24 md:pt-0 mb-4 md:mb-0" style={{ y: contentY }}>
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[38px] md:text-[clamp(52px,5vw,72px)] text-primary-foreground leading-[0.98] tracking-tight mb-5"
+          className="text-[36px] md:text-[clamp(48px,4.5vw,64px)] text-primary-foreground leading-[0.98] tracking-tight mb-5"
         >
           {t("hero.title")}
         </motion.h1>
@@ -202,7 +202,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[18px] md:text-[20px] text-primary-foreground/70 max-w-[600px] font-light leading-[1.45] mb-8"
+          className="text-[16px] md:text-[18px] text-primary-foreground/70 max-w-[520px] font-light leading-[1.5] mb-8"
         >
           {t("hero.subtitle")}
         </motion.p>
