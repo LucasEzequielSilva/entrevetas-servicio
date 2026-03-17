@@ -54,10 +54,10 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-700" />
               </div>
-              <h3 className="text-lg md:text-xl tracking-tight mb-2">
+              <h3 className="text-[28px] md:text-[32px] tracking-tight mb-2">
                 {t(service.titleKey)}
               </h3>
-              <p className="text-muted-foreground leading-relaxed font-light text-sm">
+              <p className="text-muted-foreground leading-relaxed font-light text-[16px] md:text-[17px]">
                 {t(service.descKey)}
               </p>
             </motion.div>

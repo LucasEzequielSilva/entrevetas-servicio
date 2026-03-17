@@ -29,7 +29,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[28px] md:text-[34px] lg:text-[40px] text-primary-foreground tracking-tight mb-4 leading-tight"
+          className="text-[38px] md:text-[clamp(42px,4vw,64px)] text-primary-foreground tracking-tight mb-4 leading-tight"
         >
           {t("contact.title")}
         </motion.h2>

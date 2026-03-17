@@ -47,7 +47,7 @@ const Process = () => {
                 {step.number}
               </span>
               <div className="w-1 h-1 rounded-full bg-accent/40 shrink-0" />
-              <h3 className="text-lg md:text-xl tracking-tight text-foreground/80">
+              <h3 className="text-[28px] md:text-[32px] tracking-tight text-foreground/80">
                 {step.title}
               </h3>
             </motion.div>
