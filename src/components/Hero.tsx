@@ -49,7 +49,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100svh] flex items-end pb-16 md:pb-32 overflow-hidden p-4 md:p-6"
+      className="relative min-h-[100svh] flex items-end pb-12 md:pb-24 overflow-hidden p-4 md:p-6"
     >
       <motion.div className="absolute inset-4 md:inset-6 rounded-2xl md:rounded-3xl overflow-hidden" style={{ y: imageY, scale: imageScale }}>
         <video
@@ -69,7 +69,7 @@ const Hero = () => {
 
       {/* Hero-only Nav (transparent, visible in hero) */}
       <nav className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-16 py-5 md:py-6">
-        <img src={navLogoWhite} alt="Entre Vetas" className="h-[32px] md:h-[45px] w-auto" />
+        <img src={navLogoWhite} alt="Entre Vetas" className="h-[28px] md:h-[40px] w-auto" />
         <div className="flex items-center gap-6 md:gap-8">
           {navLinks.map((link) => (
             <a key={link.key} href={link.href} onClick={(e) => smoothScroll(e, link.href)}
@@ -93,7 +93,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-[32px] md:h-[45px] w-auto"
+          className="h-[28px] md:h-[40px] w-auto"
         />
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -189,7 +189,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Hero content */}
-      <motion.div className="relative z-10 px-4 md:px-16 max-w-4xl pt-24 md:pt-0" style={{ y: contentY }}>
+      <motion.div className="relative z-10 px-4 md:px-16 max-w-3xl pt-24 md:pt-0 mb-4 md:mb-0" style={{ y: contentY }}>
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
