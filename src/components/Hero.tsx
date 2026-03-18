@@ -86,14 +86,14 @@ const Hero = () => {
       </nav>
 
       {/* Sticky Nav */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-16 py-3 transition-all duration-700 ease-out bg-white shadow-sm ${scrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-8 md:px-16 py-3 transition-all duration-700 ease-out bg-white shadow-sm ${scrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
         <motion.img
           src={navLogoDark}
           alt="Entre Vetas"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-[28px] md:h-[40px] w-auto"
+          className="h-[30px] md:h-[38px] w-auto"
         />
         <motion.div
           initial={{ opacity: 0, x: 20 }}
