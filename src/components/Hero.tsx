@@ -189,7 +189,7 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Hero content */}
-      <motion.div className="relative z-10 px-4 md:px-10 max-w-3xl pt-24 md:pt-0 mb-4 md:mb-0" style={{ y: contentY }}>
+      <motion.div className="relative z-10 px-8 md:px-16 max-w-3xl mt-8 md:mt-0" style={{ y: contentY }}>
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
