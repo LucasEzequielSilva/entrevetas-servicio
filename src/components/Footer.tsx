@@ -19,7 +19,7 @@ const Footer = () => {
           </a>
           <span className="hidden md:inline text-border">·</span>
           <a
-            href="https://www.instagram.com/entrevetas_/"
+            href="https://www.instagram.com/entrevetas.servicios/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-foreground transition-colors duration-300"
