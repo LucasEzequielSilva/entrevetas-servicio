@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import galleryPergola from "@/assets/gallery-pergola.jpg";
 import video1 from "@/assets/video-1.mp4";
 import video2 from "@/assets/video-2.mp4";
 import galleryBg from "@/assets/gallery-bg.mp4";
