@@ -8,9 +8,9 @@ const Services = () => {
   const { t } = useLanguage();
 
   const services = [
-    { image: servicePergola, titleKey: "services.1.title", descKey: "services.1.desc", altKey: "services.1.alt" },
-    { image: serviceDeck, titleKey: "services.2.title", descKey: "services.2.desc", altKey: "services.2.alt" },
-    { image: serviceInterior, titleKey: "services.3.title", descKey: "services.3.desc", altKey: "services.3.alt" },
+    { image: servicePergola, titleKey: "services.1.title", descKey: "services.1.desc", altKey: "services.1.alt", objectPosition: "object-top" },
+    { image: serviceDeck, titleKey: "services.2.title", descKey: "services.2.desc", altKey: "services.2.alt", objectPosition: "object-center" },
+    { image: serviceInterior, titleKey: "services.3.title", descKey: "services.3.desc", altKey: "services.3.alt", objectPosition: "object-center" },
   ];
 
   return (
