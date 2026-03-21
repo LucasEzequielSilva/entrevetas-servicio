@@ -12,7 +12,7 @@ const Footer = () => {
           <span>{t("footer.zone")}</span>
           <span className="hidden md:inline text-border">·</span>
           <a
-            href="mailto:hello@maderostudio.es"
+            href="mailto:Monteleonegabrieldino@gmail.com"
             className="hover:text-foreground transition-colors duration-300"
           >
             hello@maderostudio.es
