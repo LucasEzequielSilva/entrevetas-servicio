@@ -35,15 +35,6 @@ const Gallery = () => {
       />
       <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
       <div className="max-w-[1300px] mx-auto relative z-10">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-[12px] tracking-[0.3em] uppercase text-muted-foreground mb-4"
-        >
-          {t("gallery.label")}
-        </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
