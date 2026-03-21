@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import galleryPergola from "@/assets/gallery-pergola.jpg";
 import video1 from "@/assets/video-1.mp4";
 import video2 from "@/assets/video-2.mp4";
 import galleryBg from "@/assets/gallery-bg.mp4";
@@ -18,7 +18,7 @@ const Gallery = () => {
     { type: "image", src: gallery1, alt: "Celosía de listones de madera", labelKey: "gallery.1", altKey: "gallery.1.alt", span: "md:col-span-2 md:row-span-2" },
     { type: "image", src: gallery2, alt: "Altillo de madera maciza", labelKey: "gallery.2", altKey: "gallery.2.alt" },
     { type: "video", src: video1, labelKey: "gallery.5", altKey: "gallery.5.alt" },
-    { type: "image", src: gallery3, alt: "Restauración de mesa", labelKey: "gallery.3", altKey: "gallery.3.alt", span: "md:col-span-2" },
+    { type: "image", src: galleryPergola, alt: "Pérgola de madera exterior", labelKey: "gallery.4", altKey: "gallery.4.alt", span: "md:col-span-2" },
     { type: "video", src: video2, labelKey: "gallery.6", altKey: "gallery.6.alt" },
   ];
 
