@@ -15,7 +15,7 @@ const Footer = () => {
             href="mailto:Monteleonegabrieldino@gmail.com"
             className="hover:text-foreground transition-colors duration-300"
           >
-            hello@maderostudio.es
+            Monteleonegabrieldino@gmail.com
           </a>
           <span className="hidden md:inline text-border">·</span>
           <a
