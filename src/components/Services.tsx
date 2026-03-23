@@ -43,23 +43,23 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="group"
+              className="group relative overflow-hidden rounded-[20px] aspect-[3/4] cursor-pointer"
             >
-              <div className="relative overflow-hidden rounded-xl md:rounded-2xl aspect-[4/3] mb-5">
               <img
-                  src={service.image}
-                  alt={t(service.altKey)}
-                  loading="lazy"
-                  className={`w-full h-full object-cover ${service.objectPosition} transition-transform duration-[1.2s] ease-out group-hover:scale-105`}
-                />
-                <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-700" />
+                src={service.image}
+                alt={t(service.altKey)}
+                loading="lazy"
+                className={`absolute inset-0 w-full h-full object-cover ${service.objectPosition} transition-transform duration-[1.2s] ease-out group-hover:scale-110`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent group-hover:from-foreground/90 group-hover:via-foreground/30 transition-all duration-700" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-7">
+                <h3 className="text-[20px] md:text-[24px] tracking-tight mb-1.5 text-primary-foreground font-serif">
+                  {t(service.titleKey)}
+                </h3>
+                <p className="text-primary-foreground/80 leading-relaxed font-light text-[14px] md:text-[15px]">
+                  {t(service.descKey)}
+                </p>
               </div>
-              <h3 className="text-[20px] md:text-[24px] tracking-tight mb-2">
-                {t(service.titleKey)}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed font-light text-[15px] md:text-[16px]">
-                {t(service.descKey)}
-              </p>
             </motion.div>
           ))}
         </div>
