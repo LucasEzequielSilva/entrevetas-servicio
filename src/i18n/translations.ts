@@ -118,6 +118,8 @@ export const translations: Record<Language, Record<string, string>> = {
     "gallery.2.alt": "Solid wood loft installed in a home in Altea",
     "gallery.3": "Restoration",
     "gallery.3.alt": "Artisan wood table restoration in Altea",
+    "gallery.4": "Pergola",
+    "gallery.4.alt": "Outdoor wooden pergola installed in Altea",
     "gallery.5": "Workshop",
     "gallery.5.alt": "Entre Vetas artisan carpentry workshop in Altea",
     "gallery.6": "Process",
