@@ -16,23 +16,14 @@ const Services = () => {
   return (
     <section id="services" className="py-[70px] md:py-[100px] lg:py-[120px] px-6 md:px-10">
       <div className="max-w-[1300px] mx-auto">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-[12px] tracking-[0.3em] uppercase text-muted-foreground mb-4"
-        >
-          {t("services.label")}
-        </motion.p>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[28px] md:text-[clamp(36px,3.5vw,44px)] tracking-tight mb-10 md:mb-14 leading-tight"
+          className="text-[28px] md:text-[clamp(32px,3vw,40px)] tracking-tight mb-10 md:mb-14 leading-tight"
         >
-          {t("services.title")}
+          {t("services.label")}
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
