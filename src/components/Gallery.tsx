@@ -40,7 +40,7 @@ const Gallery = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[28px] md:text-[clamp(36px,3.5vw,44px)] tracking-tight mb-10 md:mb-12 text-foreground"
+          className="text-[28px] md:text-[clamp(32px,3vw,40px)] tracking-tight mb-10 md:mb-12 text-foreground"
         >
           {t("gallery.title")}
         </motion.h2>

@@ -19,7 +19,7 @@ const Process = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-[28px] md:text-[clamp(36px,3.5vw,44px)] tracking-tight mb-10 md:mb-16 leading-tight"
+          className="text-[28px] md:text-[clamp(32px,3vw,40px)] tracking-tight mb-10 md:mb-16 leading-tight"
         >
           {t("process.title.1")}
         </motion.h2>
