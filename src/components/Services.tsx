@@ -52,6 +52,7 @@ const Services = () => {
                 className={`absolute inset-0 w-full h-full object-cover ${service.objectPosition} transition-transform duration-[1.2s] ease-out group-hover:scale-110`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent group-hover:from-foreground/90 group-hover:via-foreground/30 transition-all duration-700" />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 backdrop-blur-[6px] [mask-image:linear-gradient(to_top,black_30%,transparent)]" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-7">
                 <h3 className="text-[20px] md:text-[24px] tracking-tight mb-1.5 text-primary-foreground font-serif">
                   {t(service.titleKey)}
