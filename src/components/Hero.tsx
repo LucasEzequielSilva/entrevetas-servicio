@@ -85,46 +85,58 @@ const Hero = () => {
         </div>
       </nav>
 
-      {/* Sticky Nav */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-8 md:px-16 py-3 transition-all duration-700 ease-out bg-white shadow-sm ${scrolled ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}>
-        <motion.img
-          src={navLogoDark}
-          alt="Entre Vetas"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-[30px] md:h-[38px] w-auto"
-        />
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex items-center gap-6 md:gap-8"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.key}
-              href={link.href}
-              onClick={(e) => smoothScroll(e, link.href)}
-              className="hidden min-[900px]:inline text-[12px] tracking-widest uppercase text-[oklch(44.6%_0.043_257.281)] hover:text-foreground transition-colors duration-300"
-            >
-              {t(link.key)}
-            </a>
-          ))}
-          <LanguageSwitcher variant="sticky" />
-
-          {/* Hamburger */}
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="min-[900px]:hidden flex flex-col justify-center items-center gap-[5px] p-1"
-            aria-label="Open menu"
+      {/* Sticky Nav — Glass Morphism */}
+      <AnimatePresence>
+        {scrolled && (
+          <motion.nav
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -100, opacity: 0 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed top-0 left-0 right-0 z-40"
           >
-            <span className="block w-[24px] h-[2px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
-            <span className="block w-[24px] h-[2px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
-            <span className="block w-[24px] h-[2px] bg-[oklch(44.6%_0.043_257.281)] rounded-sm" />
-          </button>
-        </motion.div>
-      </nav>
+            <div className="mx-3 md:mx-6 mt-3 md:mt-4 rounded-2xl bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.08)] border border-white/50">
+              <div className="flex items-center justify-between px-6 md:px-8 py-3">
+                <motion.img
+                  src={navLogoDark}
+                  alt="Entre Vetas"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="h-[28px] md:h-[34px] w-auto"
+                />
+                <div className="flex items-center gap-6 md:gap-8">
+                  {navLinks.map((link, i) => (
+                    <motion.a
+                      key={link.key}
+                      href={link.href}
+                      onClick={(e) => smoothScroll(e, link.href)}
+                      initial={{ opacity: 0, y: -8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.05 * i + 0.15 }}
+                      className="hidden min-[900px]:inline relative text-[11px] tracking-[0.15em] uppercase text-foreground/60 hover:text-foreground transition-colors duration-300 py-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full"
+                    >
+                      {t(link.key)}
+                    </motion.a>
+                  ))}
+                  <LanguageSwitcher variant="sticky" />
+
+                  {/* Hamburger */}
+                  <button
+                    onClick={() => setMenuOpen(true)}
+                    className="min-[900px]:hidden flex flex-col justify-center items-center gap-[5px] p-1"
+                    aria-label="Open menu"
+                  >
+                    <span className="block w-[22px] h-[1.5px] bg-foreground/70 rounded-full" />
+                    <span className="block w-[22px] h-[1.5px] bg-foreground/70 rounded-full" />
+                    <span className="block w-[16px] h-[1.5px] bg-foreground/70 rounded-full ml-auto" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
 
       {/* Mobile full-screen menu */}
       <AnimatePresence>
