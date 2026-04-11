@@ -6,6 +6,7 @@ import gallery2 from "@/assets/gallery-2.jpg";
 import galleryPergola from "@/assets/gallery-pergola.jpg";
 import video1 from "@/assets/video-1.mp4";
 import video2 from "@/assets/video-2.mp4";
+import galleryPorton from "@/assets/gallery-porton.jpg";
 import galleryBg from "@/assets/gallery-bg.mp4";
 
 type GalleryItem =
@@ -55,8 +56,9 @@ const Gallery = () => {
       className: "md:col-span-2",
     },
     {
-      type: "video",
-      src: video2,
+      type: "image",
+      src: galleryPorton,
+      alt: "Portón corredizo de madera",
       labelKey: "gallery.6",
       altKey: "gallery.6.alt",
       className: "",
@@ -133,7 +135,7 @@ const Gallery = () => {
                   src={project.src}
                   alt={t(project.altKey)}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-all duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-all duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                 />
               ) : (
                 <video
@@ -143,7 +145,7 @@ const Gallery = () => {
                   playsInline
                   autoPlay
                   aria-label={t(project.altKey)}
-                  className="w-full h-full object-cover transition-all duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-all duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                 />
               )}
 
