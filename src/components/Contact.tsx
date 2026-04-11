@@ -44,7 +44,7 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="text-primary-foreground/60 font-light text-[15px] max-w-lg mx-auto mb-10 leading-relaxed"
         >
-          Cada proyecto comienza con una conversación. Contanos tu idea y diseñamos juntos la solución perfecta.
+          {t("contact.description")}
         </motion.p>
 
         <motion.a

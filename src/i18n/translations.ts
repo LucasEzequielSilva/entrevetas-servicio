@@ -70,6 +70,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Contact
     "contact.title": "Hablemos de tu proyecto en madera.",
+    "contact.description": "Cada proyecto comienza con una conversación. Contanos tu idea y diseñamos juntos la solución perfecta.",
     "contact.cta": "Escribir por WhatsApp",
 
     // Footer
@@ -131,6 +132,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.3.title": "Project design",
     "process.4.title": "Fabrication and installation",
     "contact.title": "Let's talk about your wood project.",
+    "contact.description": "Every project starts with a conversation. Tell us your idea and we'll design the perfect solution together.",
     "contact.cta": "Write on WhatsApp",
     "footer.location": "Altea, Spain",
     "footer.zone": "We work in Altea, Benidorm, Calpe and Moraira.",
@@ -190,6 +192,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.3.title": "Projektentwurf",
     "process.4.title": "Fertigung und Montage",
     "contact.title": "Sprechen wir über Ihr Holzprojekt.",
+    "contact.description": "Jedes Projekt beginnt mit einem Gespräch. Erzählen Sie uns Ihre Idee und wir entwerfen gemeinsam die perfekte Lösung.",
     "contact.cta": "Auf WhatsApp schreiben",
     "footer.location": "Altea, Spanien",
     "footer.zone": "Wir arbeiten in Altea, Benidorm, Calpe und Moraira.",
@@ -249,6 +252,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.3.title": "Projectontwerp",
     "process.4.title": "Fabricage en installatie",
     "contact.title": "Laten we praten over uw houtproject.",
+    "contact.description": "Elk project begint met een gesprek. Vertel ons uw idee en we ontwerpen samen de perfecte oplossing.",
     "contact.cta": "Schrijf op WhatsApp",
     "footer.location": "Altea, Spanje",
     "footer.zone": "We werken in Altea, Benidorm, Calpe en Moraira.",
@@ -308,6 +312,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "process.3.title": "Conception du projet",
     "process.4.title": "Fabrication et installation",
     "contact.title": "Parlons de votre projet en bois.",
+    "contact.description": "Chaque projet commence par une conversation. Parlez-nous de votre idée et nous concevrons ensemble la solution parfaite.",
     "contact.cta": "Écrire sur WhatsApp",
     "footer.location": "Altea, Espagne",
     "footer.zone": "Nous travaillons à Altea, Benidorm, Calpe et Moraira.",
