@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import fullLogo from "@/assets/ev-logo-dark.png";
+import footerLogo from "@/assets/ev-logo-footer.webp";
 
 const WHATSAPP_NUMBER = "34611457391";
 
@@ -40,9 +40,9 @@ const Footer = () => {
             className="md:col-span-5"
           >
             <img
-              src={fullLogo}
+              src={footerLogo}
               alt="Entre Vetas"
-              className="h-[40px] w-auto brightness-0 invert mb-6"
+              className="h-[60px] w-auto mb-6"
             />
             <p className="text-primary-foreground/50 text-sm font-light leading-relaxed max-w-xs">
               {t("hero.subtitle")}
