@@ -75,7 +75,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     "footer.location": "Altea, España",
-    "footer.zone": "Trabajamos en Altea, Benidorm, Calpe y Moraira.",
+    "footer.zone": "Trabajamos en Altea, Benidorm, Calpe, Alfas del Pi, Albir y La Nucia.",
   },
   en: {
     "nav.gallery": "Work",
@@ -135,7 +135,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.description": "Every project starts with a conversation. Tell us your idea and we'll design the perfect solution together.",
     "contact.cta": "Write on WhatsApp",
     "footer.location": "Altea, Spain",
-    "footer.zone": "We work in Altea, Benidorm, Calpe and Moraira.",
+    "footer.zone": "We work in Altea, Benidorm, Calpe, Alfas del Pi, Albir and La Nucia.",
   },
   de: {
     "nav.gallery": "Arbeiten",
@@ -195,7 +195,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.description": "Jedes Projekt beginnt mit einem Gespräch. Erzählen Sie uns Ihre Idee und wir entwerfen gemeinsam die perfekte Lösung.",
     "contact.cta": "Auf WhatsApp schreiben",
     "footer.location": "Altea, Spanien",
-    "footer.zone": "Wir arbeiten in Altea, Benidorm, Calpe und Moraira.",
+    "footer.zone": "Wir arbeiten in Altea, Benidorm, Calpe, Alfas del Pi, Albir und La Nucia.",
   },
   nl: {
     "nav.gallery": "Werk",
@@ -255,7 +255,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.description": "Elk project begint met een gesprek. Vertel ons uw idee en we ontwerpen samen de perfecte oplossing.",
     "contact.cta": "Schrijf op WhatsApp",
     "footer.location": "Altea, Spanje",
-    "footer.zone": "We werken in Altea, Benidorm, Calpe en Moraira.",
+    "footer.zone": "We werken in Altea, Benidorm, Calpe, Alfas del Pi, Albir en La Nucia.",
   },
   fr: {
     "nav.gallery": "Travaux",
@@ -315,6 +315,6 @@ export const translations: Record<Language, Record<string, string>> = {
     "contact.description": "Chaque projet commence par une conversation. Parlez-nous de votre idée et nous concevrons ensemble la solution parfaite.",
     "contact.cta": "Écrire sur WhatsApp",
     "footer.location": "Altea, Espagne",
-    "footer.zone": "Nous travaillons à Altea, Benidorm, Calpe et Moraira.",
+    "footer.zone": "Nous travaillons à Altea, Benidorm, Calpe, Alfas del Pi, Albir et La Nucia.",
   },
 };
